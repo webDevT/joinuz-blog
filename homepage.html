@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Joinuz</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/vendors.css" />
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="sticky-nav">
+  <div class="container">
+    <div class="header-nav">
+      <div class="header-nav__logo">
+        <a href="#"><img src="img/logo.svg" alt=""></a>
+      </div>
+      <button class="header-nav__hamburger mobile-nav-btn js-mobile-nav-trigger">
+        <i class="icon icon-hamburger"></i>
+      </button>
+      <div class="header-nav__inner">
+        <div class="header-nav__inner-top">
+          <span>
+            <span class="color-secundary"><i class="icon icon-smiling-phone"></i>Lekker</span>
+            bellen met het leukste detacheringsbureau op 0299 - 76 44 46
+          </span>
+          <a href="#" class="header-nav__login">
+            <i class="icon icon-lock"></i>
+            Inloggen
+          </a>
+        </div>
+        <div class="header-nav__inner-bottom">
+          <ul>
+            <li class="parent"><a href="#vacatures" class="js-sticky-nav-trigger">Vacatures <i class="icon icon-arrow-down"></i></a></li>
+            <li><a href="#">Jouw droombaan</a></li>
+            <li class="parent"><a href="#over-ons" class="js-sticky-nav-trigger">Over ons <i class="icon icon-arrow-down"></i></a></li>
+          </ul>
+          <div class="header-nav__buttons">
+            <a href="#" class="btn btn_secundary btn_sm">Inschrijven</a>
+            <a href="#main" class="header-nav__hamburger js-sticky-nav-trigger">
+              <i class="icon icon-hamburger"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pulldown-nav">
+    <div class="container pulldown-nav__container">
+      <div class="pulldown-nav__title">
+        <div class="section-title section-title__on-light">
+  <div>Lekker</div>
+  <div>handig</div>
+  <div>Alles op een rijtje</div>
+</div>
+      </div>
+      <div class="pulldown-nav__mobile-btns">
+        <a href="#" class="btn btn_secundary btn_md">Inschrijven</a>
+        <a href="#" class="btn btn_secundary-light btn_sm"><i class="icon icon-lock"></i>Inloggen</a>
+      </div>
+      <div class="pulldown-nav__menu" data-sticky-nav="main">
+        <ul>
+          <li><a href="#">Certificring</a></li>
+          <li><a href="#">Werving & selectie</a></li>
+          <li><a href="#">Detachering</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Payrolling</a></li>
+          <li><a href="#">Mobiliteit</a></li>
+          <li><a href="#">Projecten & advies</a></li>
+        </ul>
+        <div class="pulldown-nav__cta-position">
+          <a href="#" class="btn btn_secundary-light btn_no-shadow">Kennismakingsgesprek</a>
+        </div>
+      </div>
+      <a href="#vacatures" class="pulldown-nav__mobile-link parent">Vacatures <i class="icon icon-arrow-down"></i></a>
+      <div class="pulldown-nav__menu" data-sticky-nav="vacatures">
+        <ul>
+          <li><a href="#">Werken bij de Overheid</a></li>
+          <li><a href="#">Werken bij de Gemeente</a></li>
+          <li><a href="#">Vacatures bij Joinuz</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Werken in de Zorg</a></li>
+          <li><a href="#">Vacatures Sociaal Domein</a></li>
+          <li><a href="#">Vacatures Omgeving & Recht</a></li>
+        </ul>
+        <div class="pulldown-nav__cta-position">
+          <a href="#" class="btn btn_secundary-light btn_no-shadow">Alle 241 vacatures</a>
+        </div>
+      </div>
+      <a href="#" class="pulldown-nav__mobile-link">Jouw droombaan</a>
+      <a href="#over-ons" class="pulldown-nav__mobile-link parent">Over ons <i class="icon icon-arrow-down"></i></a>
+      <div class="pulldown-nav__menu" data-sticky-nav="over-ons">
+        <ul>
+          <li><a href="#">Onze diensten</a></li>
+          <li><a href="#">Arbeidsvoorwaarden</a></li>
+          <li><a href="#">Onze mensen</a></li>
+        </ul>
+        <ul>
+          <li class="parent">
+            <a href="#">Joinuz voor jou</a>
+            <ul>
+              <li><a href="#">Onze diensten</a></li>
+              <li><a href="#">Arbeidsvoorwaarden</a></li>
+              <li><a href="#">Onze mensen</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Anderen over ons</a></li>
+          <li><a href="#">Werken als ZZP'er</a></li>
+        </ul>
+        
+        <div class="pulldown-nav__cta-position">
+          <a href="#" class="btn btn_secundary-light btn_no-shadow">Contact</a>
+        </div>
+      </div>
+
+      <div class="pulldown-nav__mobile-contact">
+        <i class="icon icon-smiling-phone"></i>
+        <div>
+          <strong>
+            <span class="color-secundary">Lekker</span> bellen
+          </strong>
+          met ons op 0299 - 76 44 46
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="main-header" style="background-image: url(/img/stad.png)">
+      <div class="main-header__overflow" style="width: 0;">
+        <div class="main-header__title-wrap">
+          <div class="main-header__subtext">De beste banen om</div>
+          <div class="main-header__title">lekker te <span>leven</span></div>
+        </div>
+      </div>
+      <div id="bike" class="main-header__bike">
+        <svg id="hat-splash" width="123" height="45" viewBox="0 0 123 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M103.358 42.7799C110.111 34.8979 120.19 32.8579 120.19 32.8579" stroke="#E41B23" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M44.7099 24.464C43.3009 14.51 38.7739 2 38.7739 2" stroke="#E41B23" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M15.812 42.7345C9.981 35.2815 2 30.8475 2 30.8475" stroke="#E41B23" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M81.963 17.0138C75.529 23.9518 72.417 32.5358 72.417 32.5358" stroke="#E41B23" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        <img src="./img/bike.png" alt="">
+      </div>
+    </div>
+
+    <section class="bg-dark">
+      <div class="container">
+        <form action="" class="homepage-search">
+          <div class="section-title @@className">
+  <div>Lekker</div>
+  <div>solliciteren</div>
+  <div>Vind jouw volgende baan</div>
+</div>
+          <div class="form-group">
+            <div class="form-field">
+              <div class="select">
+                <select>
+                  <option value="" disabled selected>Selecteer je vakgebied</option>
+                  <option value="1">First option</option>
+                  <option value="2">Second option</option>
+                  <option value="3">Third option</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-field">
+              <div class="form-field__with-button">
+                <input type="text" placeholder="Zoek in 214 vacatures">
+                <button><i class="icon icon-search"></i></button>
+              </div>
+            </div>
+          </div>
+          <i class="icon icon-arrow-pointer-right"></i>
+        </form>
+      </div>
+    </section>
+
+    <div class="container homepage-small-blocks">
+      <div class="homepage-small-blocks__jobs-btn brick brick_left brick_grey-light">
+        <i class="icon icon-arm-like wow fadeInUp"></i>
+        <div class="h4 color-secundary">Vacatures in 2 vakgebieden</div>
+        <div class="homepage-small-blocks__btn-group">
+          <a href="#" class="btn btn_sm btn_primary">Overheid (134)</a>
+          &
+          <a href="#" class="btn btn_sm btn_primary">Zorg (80)</a>
+        </div>
+        <p><i class="icon icon-arrow-down"></i> Bekijk onze trending vacatures</p>
+      </div>
+
+      <div class="job-alerts-cta brick brick_right brick_secundary">
+  <i class="icon icon-bell"></i>
+  <label class="btn btn_md btn_primary btn_splash switch" data-lightbox="lightBox">
+    @@title
+    <label>
+      <input type="checkbox">
+      <span></span>
+    </label>
+  </label>
+  <div class="job-alerts-cta__info-alert tooltip" data-tooltip-content="#huh_tooltip"><i class="icon icon-info"></i>Huh?</div>
+  <div class="d-none">
+    <span id="huh_tooltip">
+      <div><i class="icon icon-info"></i></div>
+      Altijd als 1e op de hoogte van de nieuwste vacatures als je een job alert aanmaakt!
+    </span>
+  </div>
+</div>
+    </div>
+
+    <div class="container homepage-info-block">
+      <div class="homepage-info-block__inner">
+        <p>
+          Je werkt om te leven. Niet andersom. Toch maakt werk
+          een groot onderdeel van je leven uit. Die baan moet dus
+          perfect bij je passen. Laat dat maar aan Joinuz over.
+        </p>
+        <p>
+          Wij helpen <span class="font-permanent">passievolle</span> professionals aan een
+          baan die naadloos aansluit op lekker leven.
+        </p>
+        <div>
+          <a href="#" class="btn btn_md btn_secundary">Inschrijven</a>
+          <a href="#" class="btn btn_sm btn_secundary-light btn_no-shadow">Ik kom langs</a>
+        </div>
+      </div>
+      <div class="homepage-info-block__images">
+        <i class="icon icon-hearts wow fadeInUp"></i>
+        <div class="homepage-polaroids-stack">
+          <div class="polaroid polaroid_no-decors">
+            <div class="polaroid__image">
+              <div style="background-image: url(./img/polaroid-img.jpg)"></div>
+            </div>
+          </div>
+          <div class="polaroid polaroid_no-decors">
+            <div class="polaroid__image">
+              <div style="background-image: url(./img/polaroid-img.jpg)"></div>
+            </div>
+          </div>
+          <div class="polaroid polaroid_no-decors">
+            <div class="polaroid__image">
+              <div style="background-image: url(./img/polaroid-img.jpg)"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container homepage-tabs-block">
+      <i class="icon icon-glasses wow fadeInUp"></i>
+      <div class="homepage-tabs-block__title brick brick_left brick_primary">
+        <svg id="line_1" width="418" height="695" viewBox="0 0 418 695" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M60.594 692.313C307.469 670.977 397.886 546.621 334.81 392.096C232.442 141.312 333.299 29.6724 357.442 3.00001" stroke="#E41B23" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 15"/>
+  <path class="drow" d="M60.594 692.313C307.469 670.977 397.886 546.621 334.81 392.096C232.442 141.312 333.299 29.6724 357.442 3.00001" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+        <div>
+          <div class="section-title @@className">
+  <div>Lekker</div>
+  <div>duidelijk</div>
+  <div></div>
+</div>
+        </div>
+        <div>
+          <p class="homepage-tabs-block__subtitle">Wij zijn sterk in 2 vakgebieden</p>
+          <div class="homepage-tabs-block__btns">
+            <a href="#" class="btn btn_xs btn_white-transparent">Overheid</a>
+            &
+            <a href="#" class="btn btn_xs btn_white-transparent">Zorg</a>
+          </div>
+        </div>
+      </div>
+      <div class="homepage-tabs-block__inner">
+        <div class="homepage-tabs-block__img" style="background-image: url(./img/tabs-bg-1.png)"></div>
+        <div class="homepage-tabs-block__tabs brick brick_right brick_grey-light">
+          <div class="tabs" data-tabs-autoplay="true">
+            <ul class="tabs__nav">
+              <li class="tabs__nav-link active" data-image="./img/tabs-bg-1.png">
+                <i class="icon icon-plus-round"></i>
+                <span>
+                  <p>Trending vacatures</p>
+                  <p>Zorg</p>
+                </span>
+              </li>
+              <li class="tabs__nav-link" data-image="./img/tabs-bg-2.jpg">
+                <i class="icon icon-building"></i>
+                <span>
+                  <p>Trending vacatures</p>
+                  <p>Overheid</p>
+                </span>
+              </li>
+            </ul>
+            <div class="tabs__content">
+              <div class="tabs__content-item active">
+                <div class="jo-card">
+  <div class="jo-card__label-top">Nieuw</div>
+  <div class="jo-card__label-right">
+    <i class="icon icon-balance"></i>
+  </div>
+  <a href="#" class="jo-card__inner">
+    <div class="jo-card__content">
+      <div class="jo-card__title">Functie<i class="icon icon-arrow-right"></i></div>
+      <div class="jo-card__info">
+        <span><i class="icon icon-location"></i>Purmerend</span>
+        <span><i class="icon icon-clock"></i>16 - 36 uur</span>
+        <span><i class="icon icon-eur"></i>2200 - 3490</span>
+      </div>
+      <!-- <div class="jo-card__desc">Wij betalen €25,00 per maand mee aan je sportabonnement!</div> -->
+      <!-- <div class="jo-card__btn">
+        <button class="btn btn_secundary-light btn_no-shadow">Bekijk vacature</button>
+      </div> -->
+    </div>
+  </a>
+</div><div class="jo-card">
+  <div class="jo-card__label-top">Nieuw</div>
+  <div class="jo-card__label-right">
+    <i class="icon icon-balance"></i>
+  </div>
+  <a href="#" class="jo-card__inner">
+    <div class="jo-card__content">
+      <div class="jo-card__title">Functie<i class="icon icon-arrow-right"></i></div>
+      <div class="jo-card__info">
+        <span><i class="icon icon-location"></i>Purmerend</span>
+        <span><i class="icon icon-clock"></i>16 - 36 uur</span>
+        <span><i class="icon icon-eur"></i>2200 - 3490</span>
+      </div>
+      <!-- <div class="jo-card__desc">Wij betalen €25,00 per maand mee aan je sportabonnement!</div> -->
+      <!-- <div class="jo-card__btn">
+        <button class="btn btn_secundary-light btn_no-shadow">Bekijk vacature</button>
+      </div> -->
+    </div>
+  </a>
+</div><div class="jo-card">
+  <div class="jo-card__label-top">Nieuw</div>
+  <div class="jo-card__label-right">
+    <i class="icon icon-balance"></i>
+  </div>
+  <a href="#" class="jo-card__inner">
+    <div class="jo-card__content">
+      <div class="jo-card__title">Functie<i class="icon icon-arrow-right"></i></div>
+      <div class="jo-card__info">
+        <span><i class="icon icon-location"></i>Purmerend</span>
+        <span><i class="icon icon-clock"></i>16 - 36 uur</span>
+        <span><i class="icon icon-eur"></i>2200 - 3490</span>
+      </div>
+      <!-- <div class="jo-card__desc">Wij betalen €25,00 per maand mee aan je sportabonnement!</div> -->
+      <!-- <div class="jo-card__btn">
+        <button class="btn btn_secundary-light btn_no-shadow">Bekijk vacature</button>
+      </div> -->
+    </div>
+  </a>
+</div><div class="jo-card">
+  <div class="jo-card__label-top">Nieuw</div>
+  <div class="jo-card__label-right">
+    <i class="icon icon-balance"></i>
+  </div>
+  <a href="#" class="jo-card__inner">
+    <div class="jo-card__content">
+      <div class="jo-card__title">Functie<i class="icon icon-arrow-right"></i></div>
+      <div class="jo-card__info">
+        <span><i class="icon icon-location"></i>Purmerend</span>
+        <span><i class="icon icon-clock"></i>16 - 36 uur</span>
+        <span><i class="icon icon-eur"></i>2200 - 3490</span>
+      </div>
+      <!-- <div class="jo-card__desc">Wij betalen €25,00 per maand mee aan je sportabonnement!</div> -->
+      <!-- <div class="jo-card__btn">
+        <button class="btn btn_secundary-light btn_no-shadow">Bekijk vacature</button>
+      </div> -->
+    </div>
+  </a>
+</div>
+              </div>
+              <div class="tabs__content-item">
+                <div class="jo-card">
+  <div class="jo-card__label-top">Nieuw</div>
+  <div class="jo-card__label-right">
+    <i class="icon icon-balance"></i>
+  </div>
+  <a href="#" class="jo-card__inner">
+    <div class="jo-card__content">
+      <div class="jo-card__title">Functie<i class="icon icon-arrow-right"></i></div>
+      <div class="jo-card__info">
+        <span><i class="icon icon-location"></i>Purmerend</span>
+        <span><i class="icon icon-clock"></i>16 - 36 uur</span>
+        <span><i class="icon icon-eur"></i>2200 - 3490</span>
+      </div>
+      <!-- <div class="jo-card__desc">Wij betalen €25,00 per maand mee aan je sportabonnement!</div> -->
+      <!-- <div class="jo-card__btn">
+        <button class="btn btn_secundary-light btn_no-shadow">Bekijk vacature</button>
+      </div> -->
+    </div>
+  </a>
+</div><div class="jo-card">
+  <div class="jo-card__label-top">Nieuw</div>
+  <div class="jo-card__label-right">
+    <i class="icon icon-balance"></i>
+  </div>
+  <a href="#" class="jo-card__inner">
+    <div class="jo-card__content">
+      <div class="jo-card__title">Functie<i class="icon icon-arrow-right"></i></div>
+      <div class="jo-card__info">
+        <span><i class="icon icon-location"></i>Purmerend</span>
+        <span><i class="icon icon-clock"></i>16 - 36 uur</span>
+        <span><i class="icon icon-eur"></i>2200 - 3490</span>
+      </div>
+      <!-- <div class="jo-card__desc">Wij betalen €25,00 per maand mee aan je sportabonnement!</div> -->
+      <!-- <div class="jo-card__btn">
+        <button class="btn btn_secundary-light btn_no-shadow">Bekijk vacature</button>
+      </div> -->
+    </div>
+  </a>
+</div><div class="jo-card">
+  <div class="jo-card__label-top">Nieuw</div>
+  <div class="jo-card__label-right">
+    <i class="icon icon-balance"></i>
+  </div>
+  <a href="#" class="jo-card__inner">
+    <div class="jo-card__content">
+      <div class="jo-card__title">Functie<i class="icon icon-arrow-right"></i></div>
+      <div class="jo-card__info">
+        <span><i class="icon icon-location"></i>Purmerend</span>
+        <span><i class="icon icon-clock"></i>16 - 36 uur</span>
+        <span><i class="icon icon-eur"></i>2200 - 3490</span>
+      </div>
+      <!-- <div class="jo-card__desc">Wij betalen €25,00 per maand mee aan je sportabonnement!</div> -->
+      <!-- <div class="jo-card__btn">
+        <button class="btn btn_secundary-light btn_no-shadow">Bekijk vacature</button>
+      </div> -->
+    </div>
+  </a>
+</div><div class="jo-card">
+  <div class="jo-card__label-top">Nieuw</div>
+  <div class="jo-card__label-right">
+    <i class="icon icon-balance"></i>
+  </div>
+  <a href="#" class="jo-card__inner">
+    <div class="jo-card__content">
+      <div class="jo-card__title">Functie<i class="icon icon-arrow-right"></i></div>
+      <div class="jo-card__info">
+        <span><i class="icon icon-location"></i>Purmerend</span>
+        <span><i class="icon icon-clock"></i>16 - 36 uur</span>
+        <span><i class="icon icon-eur"></i>2200 - 3490</span>
+      </div>
+      <!-- <div class="jo-card__desc">Wij betalen €25,00 per maand mee aan je sportabonnement!</div> -->
+      <!-- <div class="jo-card__btn">
+        <button class="btn btn_secundary-light btn_no-shadow">Bekijk vacature</button>
+      </div> -->
+    </div>
+  </a>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="homepage-tabs-block__more-btn">
+        <a href="#" class="btn btn_sm btn_primary">Alle 134 Overheid vacatures</a>
+      </div>
+    </div>
+
+    <div class="mobile-col-direction">
+      <div>
+        <section class="homepage-slider-block">
+          <div class="bg-dark">
+            <div class="container">
+              <svg id="line_2" width="456" height="519" viewBox="0 0 456 519" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M118.496 515C206.781 297.246 -115 154.535 51 2.72632" stroke="#E41B23" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 15"/>
+  <path class="drow" d="M118.496 515C206.781 297.246 -115 154.535 51 2.72632" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+              <i class="icon icon-smiling-phone wow fadeInUp"></i>
+              <div class="slider-title-container">
+                <div class="section-title @@className">
+  <div>Lekker</div>
+  <div>cluppie</div>
+  <div>We staan altijd voor je klaar</div>
+</div>
+                <a href="#" class="btn btn_xs btn_white-transparent">Bekijk ons allemaal</a>
+              </div>
+              <div class="polaroid-slider">
+                <div class="user-card">
+                  <div class="user-card__info">
+                    <a href="#" class="user-card__name">Name 1 <i class="icon icon-arrow-right"></i></a>
+                    <div class="user-card__position">Recruiter Zorg</div>
+                    <ul class="user-card__info-list">
+                      <li><i class="icon icon-location"></i>Vestiging Gouda</li>
+                      <li><i class="icon icon-smiling-phone"></i>06 - 405 092 82</li>
+                      <li><i class="icon icon-letter"></i>sharona@joinuz.nl</li>
+                    </ul>
+                  </div>
+                  <div class="user-card__info">
+                    <a href="#" class="user-card__name">Name 2 <i class="icon icon-arrow-right"></i></a>
+                    <div class="user-card__position">Recruiter Zorg</div>
+                    <ul class="user-card__info-list">
+                      <li><i class="icon icon-location"></i>Vestiging Gouda</li>
+                      <li><i class="icon icon-smiling-phone"></i>06 - 405 092 82</li>
+                      <li><i class="icon icon-letter"></i>sharona@joinuz.nl</li>
+                    </ul>
+                  </div>
+                  <div class="user-card__info">
+                    <a href="#" class="user-card__name">Name 3 <i class="icon icon-arrow-right"></i></a>
+                    <div class="user-card__position">Recruiter Zorg</div>
+                    <ul class="user-card__info-list">
+                      <li><i class="icon icon-location"></i>Vestiging Gouda</li>
+                      <li><i class="icon icon-smiling-phone"></i>06 - 405 092 82</li>
+                      <li><i class="icon icon-letter"></i>sharona@joinuz.nl</li>
+                    </ul>
+                  </div>
+                  <div class="user-card__info">
+                    <a href="#" class="user-card__name">Name 4 <i class="icon icon-arrow-right"></i></a>
+                    <div class="user-card__position">Recruiter Zorg</div>
+                    <ul class="user-card__info-list">
+                      <li><i class="icon icon-location"></i>Vestiging Gouda</li>
+                      <li><i class="icon icon-smiling-phone"></i>06 - 405 092 82</li>
+                      <li><i class="icon icon-letter"></i>sharona@joinuz.nl</li>
+                    </ul>
+                  </div>
+                  <div class="user-card__info">
+                    <a href="#" class="user-card__name">Name 5 <i class="icon icon-arrow-right"></i></a>
+                    <div class="user-card__position">Recruiter Zorg</div>
+                    <ul class="user-card__info-list">
+                      <li><i class="icon icon-location"></i>Vestiging Gouda</li>
+                      <li><i class="icon icon-smiling-phone"></i>06 - 405 092 82</li>
+                      <li><i class="icon icon-letter"></i>sharona@joinuz.nl</li>
+                    </ul>
+                  </div>
+                </div>
+    
+                <div class="polaroid-slider__collection">
+                  <div class="polaroid">
+                    <div class="polaroid__image">
+                      <div class="polaroid-slider__media lazy-gif" data-src="https://media.giphy.com/media/WnIu6vAWt5ul3EVcUE/giphy.gif">
+                        <a href="https://www.joinuz.nl/team/priscilla">
+                          <video autoplay poster="https://cdn.joinuz.nl/_polaroidforcesquare/Priscilla_snowboard.png?mtime=20190124095131" loop muted>
+                            <source src="https://cdn.joinuz.nl/video/Priscilla.webm?mtime=20190620134843" type="video/webm">
+                            <source src="https://cdn.joinuz.nl/video/Priscilla.mp4?mtime=20190620134833" type="video/mp4">
+                          </video>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="polaroid__socials">
+                      <a href="#"><i class="icon icon-whatsapp"></i></a>
+                      <a href="#"><i class="icon icon-linkedin"></i></a>
+                    </div>
+                  </div>
+                  <div class="polaroid">
+                    <div class="polaroid__image">
+                      <div class="polaroid-slider__media lazy-gif" data-src="./img/polaroid-img.jpg"></div>
+                    </div>
+                    <div class="polaroid__socials">
+                      <a href="#"><i class="icon icon-whatsapp"></i></a>
+                      <a href="#"><i class="icon icon-linkedin"></i></a>
+                    </div>
+                  </div>
+                  <div class="polaroid">
+                    <div class="polaroid__image">
+                      <div class="polaroid-slider__media lazy-gif" data-src="./img/polaroid-img.jpg"></div>
+                    </div>
+                    <div class="polaroid__socials">
+                      <a href="#"><i class="icon icon-whatsapp"></i></a>
+                      <a href="#"><i class="icon icon-linkedin"></i></a>
+                    </div>
+                  </div>
+                  <div class="polaroid">
+                    <div class="polaroid__image">
+                      <div class="polaroid-slider__media lazy-gif" data-src="./img/polaroid-img.jpg"></div>
+                    </div>
+                    <div class="polaroid__socials">
+                      <a href="#"><i class="icon icon-whatsapp"></i></a>
+                      <a href="#"><i class="icon icon-linkedin"></i></a>
+                    </div>
+                  </div>
+                  <div class="polaroid">
+                    <div class="polaroid__image">
+                      <div class="polaroid-slider__media lazy-gif" data-src="./img/polaroid-img.jpg"></div>
+                    </div>
+                    <div class="polaroid__socials">
+                      <a href="#"><i class="icon icon-whatsapp"></i></a>
+                      <a href="#"><i class="icon icon-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="polaroid-slider__dots"></div>
+    
+                <div class="polaroid-slider__controls">
+                  <button class="js-prev-slide"><i class="icon icon-arrow-left"></i></button>
+                  <button class="js-next-slide"><i class="icon icon-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div>
+        <section class="homepage-edu-block">
+          <div class="bg-dark">
+            <div class="container">
+              <div class="homepage-edu-block-container">
+                <svg id="line_3" width="113" height="402" viewBox="0 0 113 402" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5764 2.9541C135.57 146.434 -47.1293 228.439 17.0201 395.234" stroke="#E41B23" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 15"/>
+<path class="drow" d="M14.5764 2.9541C135.57 146.434 -47.1293 228.439 17.0201 395.234" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                <i class="icon icon-book wow fadeInUp"></i>
+                <div class="homepage-edu-block__title">
+                  <div class="section-title @@className">
+  <div>Lekker</div>
+  <div>verstandig</div>
+  <div>Bij Joinuz bieden we jou de mogelijkheid om je gehele loopbaan lekker door te blijven leren</div>
+</div>
+                </div>
+                <div class="homepage-edu-block__img">
+                  <img src="./img/man-sparcles.svg">
+                </div>
+                <div class="homepage-edu-block__btn-block">
+                  <a href="#" class="btn btn_md btn_secundary">Ontdek meer</a>
+                </div>
+              </div>
+              <svg id="line_4" width="594" height="1233" viewBox="0 0 594 1233" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M90.6894 2C-138.351 388.176 313.517 515.541 324.995 388.176C337.343 251.16 -68.9727 354.965 14.1484 851.297C97.2695 1347.63 483.5 1260.19 591.227 1127.15" stroke="#E41B23" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 15"/>
+<path class="drow" d="M90.6894 2C-138.351 388.176 313.517 515.541 324.995 388.176C337.343 251.16 -68.9727 354.965 14.1484 851.297C97.2695 1347.63 483.5 1260.19 591.227 1127.15" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            </div>
+          </div>
+        </section>
+    
+        <section class="homepage-form-block">
+          <div class="bg-dark">
+            <div class="container">
+              <i class="icon icon-bell wow fadeInUp"></i>
+              <div class="homepage-form-block__title">
+                <div class="section-title @@className">
+  <div>Lekker</div>
+  <div>up-to-date</div>
+  <div>Altijd als 1e op de hoogte van de nieuwste vacatures als je een job alert aanmaakt!</div>
+</div>
+              </div>
+              <div class="homepage-form-block__img"></div>
+              <div class="homepage-form-block__form">
+                <form id="homeContactForm" action="">
+                  <div class="form-group">
+                    <div class="form-field form-field_select">
+                      <label>Ik ben geïnteresseerd in</label>
+                      <div class="select">
+                        <select data-depends-with="#additionalFormPart">
+                          <option value="" disabled selected>Selecteer je vakgebied</option>
+                          <option value="1">First option</option>
+                          <option value="2">Second option</option>
+                          <option value="3">Third option</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-field form-field_select">
+                      <label>Bezorg opties</label>
+                      <div class="select">
+                        <select data-depends-with="#additionalFormPart">
+                          <option value="" disabled selected>Selecteer je vakgebied</option>
+                          <option value="1">First option</option>
+                          <option value="2">Second option</option>
+                          <option value="3">Third option</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="additionalFormPart" class="form-group homepage-form-block__hidden-group">
+                    <div class="form-field form-field_select">
+                      <label>Afleveradres</label>
+                      <input type="text">
+                    </div>
+                    <div class="form-field">
+                      <div class="checkbox">
+                        <label class="checkbox__label">
+                          <input type="checkbox">
+                          <span>Ik ga akkoord met de </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="homepage-form-block__btn-block">
+                <label id="submitHomeContactForm" class="btn btn_md btn_primary btn_splash switch disabled">
+                  Zet aan
+                  <label>
+                    <input type="checkbox">
+                    <span></span>
+                  </label>
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="footer">
+  <div class="footer__top">
+    <div class="container">
+      <i class="icon icon-lightning"></i>
+      <div class="footer__top-text">
+        <div><span>Lekker</span><span>dan</span></div>
+        <div>Vacaturevraagje?</div>
+        <div>Geef ons een belletje op 0299 - 76 44 46 of mail naar <a href="#">info@joinuz.nl</a></div>
+      </div>
+      <div class="footer__top-btns">
+        <a href="#" class="btn btn_sm btn_secundary">Contact</a>
+        <ul class="footer__socials">
+          <li><a href="#"><i class="icon icon-facebook"></i></a></li>
+          <li><a href="#"><i class="icon icon-instagram"></i></a></li>
+          <li><a href="#"><i class="icon icon-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer__middle">
+    <div class="footer__left brick brick_left brick_primary">
+      <div class="footer-nav">
+        <div>
+          <div class="footer-nav__title">Omgeving & Recht</div>
+          <ul class="footer-nav__menu">
+            <li><a href="#">Juridische vacatures</a></li>
+            <li><a href="#">Vacatures overheid</a></li>
+            <li><a href="#">Werken voor de overheid</a></li>
+            <li><a href="#">Gemeente vacatures</a></li>
+            <li><a href="#">Werken bij Gemeente</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-nav__title">Zorg</div>
+          <ul class="footer-nav__menu">
+            <li><a href="#">Vacatures zorg</a></li>
+            <li><a href="#">Vacature verpleegkundige</a></li>
+            <li><a href="#">Vacatures in de zorg</a></li>
+            <li><a href="#">Verpleegkundige vacatures</a></li>
+            <li><a href="#"> Vacatures zorg en welzijn</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-nav__title">Sociaal Domein</div>
+          <ul class="footer-nav__menu">
+            <li><a href="#">Vacatures maatschappelijk werk</a></li>
+            <li><a href="#">Vacatures sociaal werk</a></li>
+            <li><a href="#">Beleidsmedewerker sociaal domein</a></li>
+            <li><a href="#">Sociaal domein vacature</a></li>
+            <li><a href="#">Detachering sociaal domein</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-contacts">
+        <strong>Joinuz Purmerend</strong>
+        Stationsweg 35, 1441 EJ Purmerend  |  0299 - 76 44 46
+        <strong>Joinuz Gouda</strong>
+        Gouwe Westzijde 1, 2802 AN Gouda  |  0182 - 222 000
+      </div>
+    </div>
+
+    <div class="footer__right brick brick_right brick_secundary">
+      <div class="footer-subnav">
+        <div class="footer-subnav__manu">
+          <ul>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Algemene voorwaarden</a></li>
+            <li><a href="#">CAO & Certificering</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">© 2019 - Joinuz</div>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightBox">
+  <div class="lightbox__window">
+    <button class="lightbox__close"><i class="icon icon-close"></i></button>
+
+    <div class="lightbox__title">
+      <i class="icon icon-bell"></i>
+      <span>Altijd als 1e op de hoogte van de nieuwste vacatures als je een job alert aanmaakt!</span>
+    </div>
+
+    <form action="">
+      <div class="form-group">
+        <div class="form-field form-field_select">
+          <label>Ik ben geïnteresseerd in</label>
+          <div class="select">
+            <select>
+              <option value="" disabled selected>Selecteer je vakgebied</option>
+              <option value="1">First option</option>
+              <option value="2">Second option</option>
+              <option value="3">Third option</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field form-field_select">
+          <label>Bezorgopties</label>
+          <div class="select">
+            <select>
+              <option value="" disabled selected>Selecteer je vakgebied</option>
+              <option value="1">First option</option>
+              <option value="2">Second option</option>
+              <option value="3">Third option</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="lightbox__form-controls">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox">
+            <span>Ik ga akkoord met de </span>
+          </label>
+        </div>
+        <label class="btn btn_md btn_primary switch">
+          Job alerts
+          <label>
+            <input type="checkbox">
+            <span></span>
+          </label>
+        </label>
+      </div>
+    </form>
+  </div>
+</div>
+  </div>
+
+  
+<script src="js/vendors.js"></script>
+<script src="js/scripts.js"></script>
+  <script>
+    $(function() {
+      if ($(document).width() < 1440) {
+        return false;
+      }
+
+      const config = {
+        animateClass: 'animated',
+        offset: 200,
+        callback: () => {},
+      }
+      const wow = new WOW(config);
+
+      wow.init();
+    });
+  </script>
+</body>
+</html>
