@@ -206,7 +206,40 @@
       <div class="container">
           <p class="readding__title">Deze blogs moet je zeker lezen</p>
 
-          <input type="text" class="search-input">
+          <div class="form-group search-input-wrapper">
+           
+            <div class="form-field form-field--input">
+              <div class="form-field__with-button">
+                <input type="text" placeholder="Search artikel" class="search-input">
+                <button><i class="icon icon-search"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="blog-category-tabs">
+            <div class="blog-category-tab active">
+              Tips & Tricks
+            </div>
+            <div class="blog-category-tab">
+              Articelen
+
+            </div>
+            <div class="blog-category-tab">
+              Whitepapers
+            </div>
+            <div class="blog-category-tab">
+              Joinuz vertelt
+            </div>
+          </div>
+          <script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+          <script>
+            $('.blog-category-tab').click(function(){
+    $(this).toggleClass('active');
+})
+          </script>
 
 
           <div class="readding__grid">
@@ -452,5 +485,6 @@
   </div>
 </div>
   </div>
+  <script class="js/search.js"></script>
 </body>
 </html>
