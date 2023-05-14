@@ -60,5 +60,9 @@ input.search-input {
         justify-content: flex-start;
         padding-bottom: 15px;
     }
+    .form-field--input {
+        margin-bottom: 25px;
+
+    }
 
 }
