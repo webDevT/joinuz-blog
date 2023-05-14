@@ -34,23 +34,17 @@ input.search-input {
 }
 
 .blog-category-tabs::-webkit-scrollbar {
-    width: 2px;
-    height: 4px;
-    border-radius: 10px;
+    width: 0px;
+    height: 0px;
   }
   
-  /* Track */
   .blog-category-tabs::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: transparent;
   }
-  
-  /* Handle */
   .blog-category-tabs::-webkit-scrollbar-thumb {
-    background: #888;
+    background: transparent;
     border-radius: 10px;
   }
-  
-  /* Handle on hover */
   .blog-category-tabs::-webkit-scrollbar-thumb:hover {
     background: #E41B23;
   }
@@ -61,8 +55,22 @@ input.search-input {
         padding-bottom: 15px;
     }
     .form-field--input {
-        margin-bottom: 25px;
+        margin-bottom: 33px;
 
     }
+    .blog-category-tabs {
+        width: 100vw;
+        margin-bottom: 20px;
+        margin-left: -20px;
+        padding-left: 20px;
+    }
+    .search-input-wrapper {
+        margin-top: 20px;
+    }
+    .blog-category-tab {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
 
 }
