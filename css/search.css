@@ -2,7 +2,7 @@ input.search-input {
     background: #fff;    
 }
 .search-input-wrapper {
-    margin-top: 40px;
+    margin-top: 0px;
 }
 .form-field--input {
     width: 600px;
@@ -29,6 +29,32 @@ input.search-input {
     color: #fff;
     border-radius: 10px;
 }
+.readding__title--article {
+    padding-top: 100px;
+}
+
+.blog-category-tabs::-webkit-scrollbar {
+    width: 2px;
+    height: 4px;
+    border-radius: 10px;
+  }
+  
+  /* Track */
+  .blog-category-tabs::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  .blog-category-tabs::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  .blog-category-tabs::-webkit-scrollbar-thumb:hover {
+    background: #E41B23;
+  }
+
 @media screen and (max-width: 768px) {
     .blog-category-tabs  {
         justify-content: flex-start;
