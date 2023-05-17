@@ -204,19 +204,30 @@
     <div class="readding">
       <i class="icon icon-pen"></i>
       <div class="container">
-          <p class="readding__title readding__title--article">Deze blogs moet je zeker lezen</p>
+         
 
-          <div class="form-group search-input-wrapper">
+        <div class="filter-wrapper">
+
+          <div class="filter-col">
+            <div class="filter-title">
+              Zoeken
+            </div>
+            <div class="form-group search-input-wrapper">
            
             <div class="form-field form-field--input">
               <div class="form-field__with-button">
-                <input type="text" placeholder="Search artikel" class="search-input">
+                <input type="text" placeholder=" Zoeken naar een blog" class="search-input">
                 <button><i class="icon icon-search"></i></button>
               </div>
             </div>
           </div>
+          </div>
 
-          <div class="blog-category-tabs">
+          <div class="filter-col ">
+            <div class="filter-title">
+              Filteren
+            </div>
+<div class="blog-category-tabs">
             <div class="blog-category-tab active">
               Tips & Tricks
             </div>
@@ -231,13 +242,23 @@
               Joinuz vertelt
             </div>
           </div>
+          </div>
+
+          
+            
+
+          
+        </div>
+
+        
           <script
   src="https://code.jquery.com/jquery-3.7.0.min.js"
   integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
   crossorigin="anonymous"></script>
           <script>
             $('.blog-category-tab').click(function(){
-    $(this).toggleClass('active');
+              $('.blog-category-tab').removeClass('active');
+    $(this).addClass('active');
 })
           </script>
 
