@@ -56,8 +56,7 @@ input.search-input {
     height: 2px;
     background: #E41B23;
     position: absolute;
-    z-index: 999;
-    
+    z-index: 999; 
 } 
 .readding__title--article {
     padding-top: 100px;
