@@ -25,8 +25,8 @@
   top: 0;
   right: 0;
   background: #fff;
-  -webkit-clip-path: polygon(100px 0, 100% 0, 100% 100%, 220px 100%, 0 366px);
-          clip-path: polygon(100px 0, 100% 0, 100% 100%, 220px 100%, 0 366px);
+  -webkit-clip-path: polygon(100px 0, 100% 0, 100% 100%, 220px 100%, 0 367px);
+          clip-path: polygon(100px 0, 100% 0, 100% 100%, 220px 100%, 0 367px);
   padding-left: 5px;
   
 
@@ -179,7 +179,7 @@
 /* start job description content */
 .job-description-content {
   padding-top: 150px;
-  padding-bottom: 150px;
+  padding-bottom: 100px;
 }
 .job-description-content .container {
   display: -webkit-box;
@@ -198,7 +198,7 @@
   width: 410px; 
   background: #fff;
   position: -webkit-sticky;
-  position: sticky;
+  position: sticky; 
   top: 75px;
   border-radius: 10px;
   border: 1px solid #E3E3E2;
@@ -206,6 +206,9 @@
           box-shadow: 0px 4px 10px 0px rgba(149, 149, 149, 0.10);
   padding: 30px 20px;
   height: auto;
+}
+.job-description-side-bar.active {
+  position: static;
 }
 .job-description-wrapper {
   width: calc(100% - 480px);
@@ -419,12 +422,12 @@
 }
 .job-description__title img {
   position: absolute;
-  right: 60%;
-  top: -25px;
+  right: 68%;
+  top: -24px;
 }
 .job-description__item-row:nth-child(3) .job-description__title img {
-  right: 10%;
-  top: -10px;
+  right: 8%;
+  top: -7px;
 }
 .job-description__item-row:last-child {
   margin-bottom: 0;
@@ -773,7 +776,7 @@
 .content-job-details:before {
   content: '';
   position: absolute;
-  top: 50px;
+  top: 12px;
   left: 0;  
   max-width: 100%;
   overflow: hidden;
@@ -792,7 +795,7 @@
   z-index: 2;
 }
 .content-job-details {
-  padding-bottom: 25px;
+  padding-bottom: 72px;
 }
 .what-do-you-get {
   position: relative;
@@ -813,13 +816,16 @@
   top: -50px;
   right: -100px;
 }
-/*
-* Prefixed by:
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
 
+.similar-vacancies {
+  width: calc(100% - 480px);
+}
+.job-description-content .container {
+  flex-wrap: wrap;
+}
+.job-description-side-bar .polaroid__socials a:hover {
+  background: #000;
+}
 @media (max-width: 1850px) {
   .content-job-details:before {
     left: -5vw;
@@ -850,6 +856,10 @@
   .what-do-you-get:after {
     right: -30vw;
   }
+  .job-description__item-row:nth-child(3) .job-description__title img {
+    right: 29%;
+    top: 7px;
+}
  
 }
 @media (max-width: 1360px) {
@@ -914,6 +924,7 @@
   padding-left: 30px;
   padding-right: 30px;
  }
+
 }
 
 @media (max-width: 992px) {
@@ -1154,6 +1165,28 @@
     display: -ms-flexbox;
     display: flex;
   }
+  .similar-vacancies {
+    width: 100%;
+  }
+  .job-description-content {
+    position: relative;
+    margin-bottom: 425px;
+   }
+   .job-description-content .container {
+    position: static;
+   }
+   .job-description-side-bar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 370px;
+    margin-left: 0;
+    z-index: 99;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: none;
+   }
+ 
  
  
  
@@ -1365,4 +1398,27 @@
   .what-do-you-get:after {
     right: 0vw;
   } 
+  .job-description__item-row:nth-child(3) .job-description__title img {
+    right: 12%;
+    top: 1px;
+}
+h1,
+.h4,
+.h2,
+.job-description__title,
+.title-20,
+.cta-job__title,
+.job-description-side-bar__name {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+ 
+}
+
+@media (max-width: 370px) {
+ .share-item {
+  margin-right: 4vw;
+ }
 }
