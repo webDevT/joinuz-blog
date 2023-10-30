@@ -570,7 +570,7 @@
   top: -2px;
 }
 .footer {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 .footer__top--no-line {
   padding-top: 40px;

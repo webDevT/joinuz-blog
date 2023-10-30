@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Joinuz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="css/vendors.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="css/job-details.css" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+  <link rel="stylesheet" type="text/css" href="css/vacancies.css" />
+</head>
+
+<body>
+  <div class="wrapper--grey">
+    <!-- start header -->
+    <div class="sticky-nav">
+      <div class="container">
+        <div class="header-nav">
+          <div class="header-nav__logo">
+            <a href="/"><img src="https://cdn.joinuz.nl/algemeen/_height60/logo.png" alt="Home" height="60" /></a>
+          </div>
+          <button class="header-nav__hamburger mobile-nav-btn js-mobile-nav-trigger" aria-label="mobile menu">
+            <i class="icon icon-hamburger"></i>
+          </button>
+          <div class="header-nav__inner">
+            <div class="header-nav__inner-top">
+              <span><span class="color-secundary"><i class="icon icon-smiling-phone"></i> Lekker</span>
+                bellen met het leukste detacheringsbureau op
+                <a style="margin-left: 5px; color: black" href="tel:0299 764 446">0299 764 446</a></span>
+              <a href="/gebruiker/login" class="header-nav__login">
+                <i class="icon icon-lock"></i> Inloggen
+              </a>
+            </div>
+
+            <div class="header-nav__inner-bottom">
+              <ul>
+                <li class="parent">
+                  <a href="#1001" class="js-sticky-nav-trigger">
+                    Vacatures
+                    <i class="icon icon-arrow-down"></i>
+                  </a>
+                </li>
+                <li class="parent">
+                  <a href="#5639" class="js-sticky-nav-trigger">
+                    Vind je droombaan
+                    <i class="icon icon-arrow-down"></i>
+                  </a>
+                </li>
+                <li class="parent">
+                  <a href="#4402" class="js-sticky-nav-trigger">
+                    Vind uw medewerker
+                    <i class="icon icon-arrow-down"></i>
+                  </a>
+                </li>
+                <li class="parent">
+                  <a href="#1003" class="js-sticky-nav-trigger">
+                    Over ons
+                    <i class="icon icon-arrow-down"></i>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="header-nav__buttons">
+                <a href="/gebruiker/registreer" class="btn btn_secundary btn_sm">Inschrijven</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pulldown-nav">
+        <div class="container pulldown-nav__container">
+          <button class="lightbox__close js-mobile-nav-close" aria-label="Sluit menu">
+            <i class="icon icon-close"></i>
+          </button>
+          <div class="pulldown-nav__title">
+            <div class="section-title section-title__on-light">
+              <div>Lekker</div>
+              <div>handig</div>
+              <div>Alles op een rijtje</div>
+            </div>
+          </div>
+
+          <div class="pulldown-nav__mobile-btns">
+            <a href="/gebruiker/registreer" class="btn btn_secundary btn_md">Inschrijven</a>
+            <a href="/gebruiker/login" class="btn btn_secundary-light btn_sm">Inloggen</a>
+          </div>
+
+          <a href="#1001" class="pulldown-nav__mobile-link parent">
+            Vacatures
+          </a>
+
+          <div class="pulldown-nav__menu" data-sticky-nav="1001">
+            <ul>
+              <li>
+                <a href="/zoek?vakgebied=zorg">Vacatures Zorg</a>
+              </li>
+
+              <li>
+                <a href="/zoek?vakgebied=sociaal">Vacatures Sociaal Domein</a>
+              </li>
+
+              <li>
+                <a href="/zoek?vakgebied=fysiek">Vacatures Fysiek Domein</a>
+              </li>
+
+              <li>
+                <a href="https://www.joinuz.nl/vacatures-overheid">Vacatures Overheid</a>
+              </li>
+
+              <li>
+                <a href="/zoek?vakgebied=wonen">Vacatures Wonen</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="https://www.joinuz.nl/werken-bij-de-gemeente">Werken bij de Gemeente</a>
+              </li>
+
+              <li>
+                <a href="https://www.joinuz.nl/vacatures-verpleegkundige">Vacatures verpleegkundige</a>
+              </li>
+
+              <li>
+                <a href="https://www.joinuz.nl/verzorgende-ig-vacatures">Verzorgende IG vacatures</a>
+              </li>
+
+              <li>
+                <a href="https://www.joinuz.nl/zoek?page=1&amp;vakgebied=intern">Vacatures Joinuz intern</a>
+              </li>
+            </ul>
+
+            <div class="pulldown-nav__cta-position">
+              <a href="/zoek" class="btn btn_secundary btn_no-shadow">Alle 660 vacatures</a>
+            </div>
+          </div>
+          <a href="#5639" class="pulldown-nav__mobile-link parent">
+            Vind je droombaan
+          </a>
+
+          <div class="pulldown-nav__menu" data-sticky-nav="5639">
+            <ul>
+              <li>
+                <a href="https://www.joinuz.nl/droombaan">Vind hier jouw Droombaan</a>
+              </li>
+
+              <li>
+                <a href="https://www.joinuz.nl/jij-en-joinuz">Joinuz voor jou</a>
+              </li>
+
+              <li>
+                <a href="https://www.joinuz.nl/academy">Joinuz Academy</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="https://www.joinuz.nl/zelfstandige-en-joinuz">Werken als ZZP'er</a>
+              </li>
+
+              <li>
+                <a href="https://www.joinuz.nl/traineeship/junior-wmo">Traineeship Sociaal Domein</a>
+              </li>
+
+              <li>
+                <a href="https://www.joinuz.nl/traineeship/ruimtelijke-ordening">Traineeship Fysiek Domein</a>
+              </li>
+            </ul>
+
+            <div class="pulldown-nav__cta-position">
+              <a href="/kennismaken-met-joinuz" class="btn btn_secundary btn_no-shadow">Kennismaking</a>
+            </div>
+          </div>
+          <a href="#4402" class="pulldown-nav__mobile-link parent">
+            Vind uw medewerker
+          </a>
+
+          <div class="pulldown-nav__menu" data-sticky-nav="4402">
+            <ul>
+              <li>
+                <a href="https://www.joinuz.nl/specialismen">Specialismen</a>
+              </li>
+
+              <li class="parent">
+                <a>Vakgebieden</a>
+                <ul>
+                  <li>
+                    <a href="https://www.joinuz.nl/vakgebied-zorg">Zorg</a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.joinuz.nl/vakgebied-sociaal-domein">Sociaal Domein</a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.joinuz.nl/vakgebied-fysiek-domein">Fysiek Domein</a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.joinuz.nl/wonen">Wonen</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="https://www.joinuz.nl/lekker-bakkie">Lekker bakkie?</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="https://www.joinuz.nl/onze-diensten">Onze diensten</a>
+              </li>
+
+              <li>
+                <a href="https://www.joinuz.nl/certificering-cao">Kwaliteitsgarantie</a>
+              </li>
+            </ul>
+
+            <div class="pulldown-nav__cta-position">
+              <a href="/contact" class="btn btn_secundary btn_no-shadow">Contact</a>
+            </div>
+          </div>
+          <a href="#1003" class="pulldown-nav__mobile-link parent">
+            Over ons
+          </a>
+
+          <div class="pulldown-nav__menu" data-sticky-nav="1003">
+            <ul>
+              <li>
+                <a href="https://www.joinuz.nl/onze-lekker-leven-filosofie">Onze lekker leven filosofie</a>
+              </li>
+
+              <li>
+                <a href="https://www.joinuz.nl/historie">Historie</a>
+              </li>
+
+              <li>
+                <a href="https://www.joinuz.nl/team">Onze mensen</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="https://www.joinuz.nl/werken-bij-joinuz">Werken bij Joinuz</a>
+              </li>
+
+              <li>
+                <a href="https://www.joinuz.nl/blog">Blog</a>
+              </li>
+            </ul>
+
+            <div class="pulldown-nav__cta-position">
+              <a href="/contact" class="btn btn_secundary btn_no-shadow">Contact</a>
+            </div>
+          </div>
+
+          <div class="pulldown-nav__mobile-contact">
+            <div>
+              <strong><span class="color-secundary">Lekker</span> bellen</strong>
+              met ons op <a href="tel:0299 764 446">0299 764 446</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end header -->
+
+    <!-- start main screen -->
+    <section class="vacancies-main-screen">
+      <div class="container">
+
+        <div class="job-details-main-screen__content">
+          <h1 class="section-title" lang="nl">Find your <span>dream job</span> with Joinuz</h1>
+          <div class="text-30">
+            Find your perfect position at Joinuz among all open vacancies below
+          </div>
+
+          <div class="main-screen__search-wrapper">
+<div class="vacancies-search-form-fix">
+  <div class="filter-back-arrow">
+    <i class="icon icon-arrow-left"></i>
+  </div>
+  <form class="vacancies-search-form">
+              <input type="text" placeholder="Search 634 vacancies">
+              <div class="search-btn">
+                <img src="img/vacancies/search.svg" alt="">
+              </div>
+            </form>
+</div>
+            
+
+            <img src="img/vacancies/left_doodle.svg" alt="" class="left-doodle">
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="main-screen__img-wrapper">
+        <img src="img/vacancies/bitmap.png" alt="" class="main-screen__img" />
+
+      </div>
+    </section>
+    <!-- end main screen -->
+
+    <!-- start vacancies content -->
+    <div class="vacancies-content">
+
+      <div class="mobile-filter-header">
+        <div class="container">
+
+           <div class="mobile-filter-btn">
+            <img src="img/vacancies/filter.svg" alt="">
+            Filter
+           </div>
+
+           <a href="" class="clear-filters-wrapper">
+            <img src="img/vacancies/filter-trush.svg" alt="">
+            Clear all 
+          </a>
+
+        </div>       
+      </div>
+
+
+
+<div class="selected-filter__list-wrapper">
+  <div class="container">
+    <div class="selected-filter__list">
+      
+        <div class="selected-filter__item btn">
+          Zorg <i class="icon icon-basket"></i>
+        </div>
+
+        <div class="selected-filter__item btn">
+          Fyseik Domein <i class="icon icon-basket"></i>
+        </div>
+
+        <div class="selected-filter__item btn">
+          Intern Joinuz <i class="icon icon-basket"></i>
+        </div>
+
+        <div class="selected-filter__item btn">
+          Hospitals <i class="icon icon-basket"></i>
+        </div>
+
+        <div class="selected-filter__item btn">
+          Mental health care <i class="icon icon-basket"></i>
+        </div>
+
+        <div class="selected-filter__item btn">
+          Sociaal Domein <i class="icon icon-basket"></i>
+        </div>
+
+        <div class="selected-filter__item btn">
+          Wonen <i class="icon icon-basket"></i>
+        </div>
+
+        <div class="selected-filter__item btn">
+          24 - 36 h <i class="icon icon-basket"></i>
+        </div>
+
+        <div class="selected-filter__item btn">
+          15 - 50km <i class="icon icon-basket"></i>
+        </div>
+
+      </div>
+  </div>
+</div>
+      
+
+      <div class="vacancies-header">
+        <div class="container">
+          <div class="vacancies-header__content">
+            <div class="jo-overview-content__view">
+
+              <span><span>Search</span> results ( 1 - 10 of 634 )</span>
+              <ul class="js-change-view">
+                <li><a href="#" data-view="list" class="active"><i class="icon icon-list-view"></i></a></li>
+                <li><a href="#" data-view="grid"><i class="icon icon-grid-view"></i></a></li>
+                <li><a href="#" data-view="block"><i class="icon icon-block-view"></i></a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="vacancies-list-wrapper">
+        <div class="container">
+
+          <div class="vacancies-sidebar">
+            <div class="sidebar-content">
+              <div class="filter-header">
+
+                <div class="filter-title">
+                  Filter
+                </div>
+
+                <div class="selectet-condition">
+                  1 Condition selected 
+                </div>
+
+                <a href="" class="clear-filters-wrapper">
+                  <img src="img/vacancies/filter-trush.svg" alt="">
+                  Clear all filters
+                </a>
+              </div>
+
+              <div class="filter-item">
+                <div class="filter-item__title">
+                  Location
+                </div>
+
+                <input type="text" placeholder="City / zip code" class="input-zip">
+              </div>
+
+              <div class="filter-item">
+                <div class="filter-item__title">
+                  Location
+                </div>
+
+                <div id="slider-range"></div>
+                <div class="range-slider__value-wrapper">
+                  <input type="text" id="amount" readonly class="amount-min">
+                  <input type="text" id="amount2" readonly class="amount-max">
+                </div>
+              </div>
+
+              <div class="filter-item filter-item--work-area">
+                <div class="filter-item__title">
+                  Work areas
+                </div>
+
+                <!-- start checkbox select wrapper -->
+                <div class="checkbox-select__wrapper">
+
+                  <div class="checkbox-select__header">
+
+                    <div class="red-checkbox">
+                      <input type="checkbox" class="red-checkbox__input" id="1">
+                      <label class="red-checkbox__label" for="1"></label>
+                      <label for="1" class="checkbox__label-text">Zorg</label>
+                    </div>
+
+                    <div class="checkbox-select__header-right">
+                      <div class="checkbox-value">
+                        14
+                      </div>
+                      <div class="checkbox-arrow">
+                        <i class="icon icon-arrow-down"></i>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="checkbox-list-hidden">
+
+                     <div class="red-checkbox">
+                      <input type="checkbox" class="red-checkbox__input" id="11">
+                      <label class="red-checkbox__label" for="11"></label>
+                      <label for="11" class="checkbox__label-text">Hospitals (4)</label>
+                    </div>
+
+                     <div class="red-checkbox">
+                      <input type="checkbox" class="red-checkbox__input" id="12">
+                      <label class="red-checkbox__label" for="12"></label>
+                      <label for="12" class="checkbox__label-text">Mental health care (4)</label>
+                    </div>
+
+                    <div class="red-checkbox">
+                      <input type="checkbox" class="red-checkbox__input" id="13">
+                      <label class="red-checkbox__label" for="13"></label>
+                      <label for="13" class="checkbox__label-text">Healthcare (government) (6)</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- end checkbox select wrapper -->
+
+                 <!-- start checkbox select wrapper -->
+                 <div class="checkbox-select__wrapper">
+
+                  <div class="checkbox-select__header">
+
+                    <div class="red-checkbox">
+                      <input type="checkbox" class="red-checkbox__input" id="2">
+                      <label class="red-checkbox__label" for="2"></label>
+                      <label for="2" class="checkbox__label-text">Sociaal Domein</label>
+                    </div>
+
+                    <div class="checkbox-select__header-right">
+                      <div class="checkbox-value">
+                        5
+                      </div>
+                      <div class="checkbox-arrow">
+                        <i class="icon icon-arrow-down"></i>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="checkbox-list-hidden">
+
+                     <div class="red-checkbox">
+                      <input type="checkbox" class="red-checkbox__input" id="21">
+                      <label class="red-checkbox__label" for="21"></label>
+                      <label for="21" class="checkbox__label-text">Hospitals (4)</label>
+                    </div>
+
+                     <div class="red-checkbox">
+                      <input type="checkbox" class="red-checkbox__input" id="22">
+                      <label class="red-checkbox__label" for="22"></label>
+                      <label for="22" class="checkbox__label-text">Mental health care (4)</label>
+                    </div>
+
+                    <div class="red-checkbox">
+                      <input type="checkbox" class="red-checkbox__input" id="23">
+                      <label class="red-checkbox__label" for="23"></label>
+                      <label for="23" class="checkbox__label-text">Healthcare (government) (6)</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- end checkbox select wrapper -->
+
+                <!-- start checkbox select wrapper -->
+                <div class="checkbox-select__wrapper">
+
+                  <div class="checkbox-select__header">
+
+                    <div class="red-checkbox">
+                      <input type="checkbox" class="red-checkbox__input" id="3">
+                      <label class="red-checkbox__label" for="3"></label>
+                      <label for="3" class="checkbox__label-text">Fyseik Domein</label>
+                    </div>
+
+                    <div class="checkbox-select__header-right">
+                      <div class="checkbox-value">
+                        2
+                      </div>
+                      <div class="checkbox-arrow">
+                        <i class="icon icon-arrow-down"></i>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="checkbox-list-hidden">
+
+                     <div class="red-checkbox">
+                      <input type="checkbox" class="red-checkbox__input" id="31">
+                      <label class="red-checkbox__label" for="31"></label>
+                      <label for="31" class="checkbox__label-text">Hospitals (4)</label>
+                    </div>
+
+                     <div class="red-checkbox">
+                      <input type="checkbox" class="red-checkbox__input" id="32">
+                      <label class="red-checkbox__label" for="32"></label>
+                      <label for="32" class="checkbox__label-text">Mental health care (4)</label>
+                    </div>
+
+                    <div class="red-checkbox">
+                      <input type="checkbox" class="red-checkbox__input" id="33">
+                      <label class="red-checkbox__label" for="33"></label>
+                      <label for="33" class="checkbox__label-text">Healthcare (government) (6)</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- end checkbox select wrapper -->
+
+                <!-- start checkbox select wrapper -->
+                <div class="checkbox-select__wrapper">
+
+                  <div class="checkbox-select__header">
+
+                    <div class="red-checkbox">
+                      <input type="checkbox" class="red-checkbox__input" id="41">
+                      <label class="red-checkbox__label" for="41"></label>
+                      <label for="41" class="checkbox__label-text">Wonen</label>
+                    </div>
+
+                    <div class="checkbox-select__header-right">
+                      <div class="checkbox-value">
+                        10
+                      </div>
+                      <div class="checkbox-arrow">
+                        <i class="icon icon-arrow-down"></i>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="checkbox-list-hidden">
+
+                     <div class="red-checkbox">
+                      <input type="checkbox" class="red-checkbox__input" id="42">
+                      <label class="red-checkbox__label" for="42"></label>
+                      <label for="42" class="checkbox__label-text">Hospitals (4)</label>
+                    </div>
+
+                     <div class="red-checkbox">
+                      <input type="checkbox" class="red-checkbox__input" id="43">
+                      <label class="red-checkbox__label" for="43"></label>
+                      <label for="43" class="checkbox__label-text">Mental health care (4)</label>
+                    </div>
+
+                    <div class="red-checkbox">
+                      <input type="checkbox" class="red-checkbox__input" id="44">
+                      <label class="red-checkbox__label" for="44"></label>
+                      <label for="44" class="checkbox__label-text">Healthcare (government) (6)</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- end checkbox select wrapper -->
+
+                <!-- start checkbox select wrapper -->
+                <div class="checkbox-select__wrapper">
+
+                  <div class="checkbox-select__header">
+
+                    <div class="red-checkbox">
+                      <input type="checkbox" class="red-checkbox__input" id="5">
+                      <label class="red-checkbox__label" for="5"></label>
+                      <label for="5" class="checkbox__label-text">Intern Joinuz</label>
+                    </div>
+
+                    <div class="checkbox-select__header-right">
+                      <div class="checkbox-value">
+                        11
+                      </div>
+                      <div class="checkbox-arrow">
+                        <i class="icon icon-arrow-down"></i>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="checkbox-list-hidden">
+
+                     <div class="red-checkbox">
+                      <input type="checkbox" class="red-checkbox__input" id="51">
+                      <label class="red-checkbox__label" for="51"></label>
+                      <label for="51" class="checkbox__label-text">Hospitals (4)</label>
+                    </div>
+
+                     <div class="red-checkbox">
+                      <input type="checkbox" class="red-checkbox__input" id="52">
+                      <label class="red-checkbox__label" for="52"></label>
+                      <label for="52" class="checkbox__label-text">Mental health care (4)</label>
+                    </div>
+
+                    <div class="red-checkbox">
+                      <input type="checkbox" class="red-checkbox__input" id="53">
+                      <label class="red-checkbox__label" for="53"></label>
+                      <label for="53" class="checkbox__label-text">Healthcare (government) (6)</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- end checkbox select wrapper -->
+
+<div class="see-more-filter__btn">
+  <span class="more">See more</span>
+  <span class="less">See less</span>
+                
+              </div>
+
+              </div>
+
+              <div class="filter-item">
+                <div class="filter-item__title">
+                  Hours per week
+                </div>
+
+                <div class="hours-input-wrapper">
+                  <div class="hours-input--min hours-input-wrap">
+<input type="number" placeholder="0" class="hours-input">
+                  </div>
+                  
+                  
+                  <span class="dash">
+                    —
+                  </span>
+                  <div class="hours-input--max hours-input-wrap">
+                    <input type="number" placeholder="0" class="hours-input">
+                  </div>
+                  
+                </div>
+
+                <a href="" class="btn btn_secundary filter-button">
+                  Zoeken
+                </a>
+
+                
+              </div>
+
+              <div class="filter-mobile-footer">
+                <a href="" class="btn btn_secundary-light btn_no-shadow">Apply</a>
+                <a href="" class="btn btn_primary">Reset</a>
+              </div>
+
+            </div>
+
+            <!-- start sidebar alert -->
+            <div class="sidebar-alert-wrapper">
+
+              <div class="sidebar-alert__header">
+                <div class="sidebar-alert__title">
+                  <span>
+                     Lekker
+                  </span>
+                  op de hoogte
+                 
+                </div>
+
+                <img src="img/vacancies/bell.svg" alt="">
+              </div>
+
+              <div class="jo-overview-filter__alert">
+                <label class="btn btn_sm btn_primary switch" data-lightbox="lightBox">
+                  Job alerts
+                  <label>
+                    <input type="checkbox">
+                    <span></span>
+                  </label>
+                </label>
+
+                <div class="job-alerts-cta__info-alert tooltip tooltipstered" data-tooltip-content="#huh_tooltip"><i class="icon icon-info"></i>Huh?</div>
+                <div class="d-none">
+                  <span id="huh_tooltip">
+                    <div><i class="icon icon-info"></i></div>
+                    Altijd als 1e op de hoogte van de nieuwste vacatures als je een job alert aanmaakt!
+                  </span>
+                </div>
+              </div>
+            </div>
+
+             <!-- end sidebar alert -->
+
+          </div>
+
+          <div class="vacancies-list">
+
+
+            <div class="job-card">
+
+              <div class="job-card__header">
+
+                <div class="job-card__header-left">
+                  <img src="img/job-details-new/plus.svg" alt="" class="job-card__header-icon">
+                  <div class="job-description-side-bar__header-title">
+                    <a href="" class="h4" lang="nl">Ambulatory Caregiv<img src="img/job-details-new/next.svg"
+                        alt=""></a>
+                    <div class="sub-title">Healthcare</div>
+                  </div>
+                </div>
+
+                <div class="job-card__header-right">
+                  <div class="job-card__label">
+                    NEW!
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="job-card__details">
+                <div class="job-card__details-item">
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i1.svg" alt="">
+                  </div>
+                  3500 - 5000
+
+                </div>
+
+                <div class="dot"></div>
+
+                <div class="job-card__details-item">
+
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i2.svg" alt="">
+                  </div>
+                  Regio Arnhem
+
+                </div>
+
+                <div class="dot"></div>
+
+                <div class="job-card__details-item">
+
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i3.svg" alt="">
+                  </div>
+                  0 - 36 uur
+
+                </div>
+              </div>
+
+              <p>1 line description about current vacancy</p>
+              <div class="job-card__footer">
+                <a href="" class="btn btn_secundary">
+                  <img src="img/job-details-new/hand.svg" alt="">Bekijk vacature</a>
+              </div>
+
+            </div>
+
+            <div class="job-card">
+
+              <div class="job-card__header">
+
+                <div class="job-card__header-left">
+                  <img src="img/job-details-new/plus.svg" alt="" class="job-card__header-icon">
+                  <div class="job-description-side-bar__header-title">
+                    <a href="" class="h4" lang="nl">Interim GZ-Psycholoog <img src="img/job-details-new/next.svg"
+                        alt=""></a>
+                    <div class="sub-title">Healthcare</div>
+                  </div>
+                </div>
+
+                <div class="job-card__header-right">
+                  <div class="job-card__label">
+                    NEW!
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="job-card__details">
+                <div class="job-card__details-item">
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i1.svg" alt="">
+                  </div>
+                  3500 - 5000
+
+                </div>
+
+                <div class="dot"></div>
+
+                <div class="job-card__details-item">
+
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i2.svg" alt="">
+                  </div>
+                  Regio Arnhem
+
+                </div>
+
+                <div class="dot"></div>
+
+                <div class="job-card__details-item">
+
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i3.svg" alt="">
+                  </div>
+                  0 - 48 uur
+
+                </div>
+              </div>
+
+              <p>1 line description about current vacancy</p>
+              <div class="job-card__footer">
+                <a href="" class="btn btn_secundary">
+                  <img src="img/job-details-new/hand.svg" alt="">Bekijk vacature</a>
+              </div>
+
+            </div>
+
+            <div class="job-card">
+
+              <div class="job-card__header">
+
+                <div class="job-card__header-left">
+                  <img src="img/job-details-new/plus.svg" alt="" class="job-card__header-icon">
+                  <div class="job-description-side-bar__header-title">
+                    <a href="" class="h4" lang="nl">Interim GZ-Psycholoog <img src="img/job-details-new/next.svg"
+                        alt=""></a>
+                    <div class="sub-title">Healthcare</div>
+                  </div>
+                </div>
+
+                <div class="job-card__header-right">
+                  <div class="job-card__label">
+                    NEW!
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="job-card__details">
+                <div class="job-card__details-item">
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i1.svg" alt="">
+                  </div>
+                  3500 - 5000
+
+                </div>
+
+                <div class="dot"></div>
+
+                <div class="job-card__details-item">
+
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i2.svg" alt="">
+                  </div>
+                  Regio Arnhem
+
+                </div>
+
+                <div class="dot"></div>
+
+                <div class="job-card__details-item">
+
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i3.svg" alt="">
+                  </div>
+                  0 - 48 uur
+
+                </div>
+              </div>
+
+              <p>1 line description about current vacancy</p>
+              <div class="job-card__footer">
+                <a href="" class="btn btn_secundary">
+                  <img src="img/job-details-new/hand.svg" alt="">Bekijk vacature</a>
+              </div>
+
+            </div>
+
+            <div class="job-card">
+
+              <div class="job-card__header">
+
+                <div class="job-card__header-left">
+                  <img src="img/job-details-new/plus.svg" alt="" class="job-card__header-icon">
+                  <div class="job-description-side-bar__header-title">
+                    <a href="" class="h4" lang="nl">Interim GZ-Psycholoog <img src="img/job-details-new/next.svg"
+                        alt=""></a>
+                    <div class="sub-title">Healthcare</div>
+                  </div>
+                </div>
+
+                <div class="job-card__header-right">
+                  <div class="job-card__label">
+                    NEW!
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="job-card__details">
+                <div class="job-card__details-item">
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i1.svg" alt="">
+                  </div>
+                  3500 - 5000
+
+                </div>
+
+                <div class="dot"></div>
+
+                <div class="job-card__details-item">
+
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i2.svg" alt="">
+                  </div>
+                  Regio Arnhem
+
+                </div>
+
+                <div class="dot"></div>
+
+                <div class="job-card__details-item">
+
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i3.svg" alt="">
+                  </div>
+                  0 - 48 uur
+
+                </div>
+              </div>
+
+              <p>1 line description about current vacancy</p>
+              <div class="job-card__footer">
+                <a href="" class="btn btn_secundary">
+                  <img src="img/job-details-new/hand.svg" alt="">Bekijk vacature</a>
+              </div>
+
+            </div>
+
+            <div class="job-card">
+
+              <div class="job-card__header">
+
+                <div class="job-card__header-left">
+                  <img src="img/job-details-new/plus.svg" alt="" class="job-card__header-icon">
+                  <div class="job-description-side-bar__header-title">
+                    <a href="" class="h4" lang="nl">Interim GZ-Psycholoog <img src="img/job-details-new/next.svg"
+                        alt=""></a>
+                    <div class="sub-title">Healthcare</div>
+                  </div>
+                </div>
+
+                <div class="job-card__header-right">
+                  <div class="job-card__label">
+                    NEW!
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="job-card__details">
+                <div class="job-card__details-item">
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i1.svg" alt="">
+                  </div>
+                  3500 - 5000
+
+                </div>
+
+                <div class="dot"></div>
+
+                <div class="job-card__details-item">
+
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i2.svg" alt="">
+                  </div>
+                  Regio Arnhem
+
+                </div>
+
+                <div class="dot"></div>
+
+                <div class="job-card__details-item">
+
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i3.svg" alt="">
+                  </div>
+                  0 - 48 uur
+
+                </div>
+              </div>
+
+              <p>1 line description about current vacancy</p>
+              <div class="job-card__footer">
+                <a href="" class="btn btn_secundary">
+                  <img src="img/job-details-new/hand.svg" alt="">Bekijk vacature</a>
+              </div>
+
+            </div>
+
+            <div class="job-card">
+
+              <div class="job-card__header">
+
+                <div class="job-card__header-left">
+                  <img src="img/job-details-new/plus.svg" alt="" class="job-card__header-icon">
+                  <div class="job-description-side-bar__header-title">
+                    <a href="" class="h4" lang="nl">Interim GZ-Psycholoog <img src="img/job-details-new/next.svg"
+                        alt=""></a>
+                    <div class="sub-title">Healthcare</div>
+                  </div>
+                </div>
+
+                <div class="job-card__header-right">
+                  <div class="job-card__label">
+                    NEW!
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="job-card__details">
+                <div class="job-card__details-item">
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i1.svg" alt="">
+                  </div>
+                  3500 - 5000
+
+                </div>
+
+                <div class="dot"></div>
+
+                <div class="job-card__details-item">
+
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i2.svg" alt="">
+                  </div>
+                  Regio Arnhem
+
+                </div>
+
+                <div class="dot"></div>
+
+                <div class="job-card__details-item">
+
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i3.svg" alt="">
+                  </div>
+                  0 - 48 uur
+
+                </div>
+              </div>
+
+              <p>1 line description about current vacancy</p>
+              <div class="job-card__footer">
+                <a href="" class="btn btn_secundary">
+                  <img src="img/job-details-new/hand.svg" alt="">Bekijk vacature</a>
+              </div>
+
+            </div>
+
+            <div class="job-card">
+
+              <div class="job-card__header">
+
+                <div class="job-card__header-left">
+                  <img src="img/job-details-new/plus.svg" alt="" class="job-card__header-icon">
+                  <div class="job-description-side-bar__header-title">
+                    <a href="" class="h4" lang="nl">Interim GZ-Psycholoog <img src="img/job-details-new/next.svg"
+                        alt=""></a>
+                    <div class="sub-title">Healthcare</div>
+                  </div>
+                </div>
+
+                <div class="job-card__header-right">
+                  <div class="job-card__label">
+                    NEW!
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="job-card__details">
+                <div class="job-card__details-item">
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i1.svg" alt="">
+                  </div>
+                  3500 - 5000
+
+                </div>
+
+                <div class="dot"></div>
+
+                <div class="job-card__details-item">
+
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i2.svg" alt="">
+                  </div>
+                  Regio Arnhem
+
+                </div>
+
+                <div class="dot"></div>
+
+                <div class="job-card__details-item">
+
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i3.svg" alt="">
+                  </div>
+                  0 - 48 uur
+
+                </div>
+              </div>
+
+              <p>1 line description about current vacancy</p>
+              <div class="job-card__footer">
+                <a href="" class="btn btn_secundary">
+                  <img src="img/job-details-new/hand.svg" alt="">Bekijk vacature</a>
+              </div>
+
+            </div>
+
+            <div class="job-card">
+
+              <div class="job-card__header">
+
+                <div class="job-card__header-left">
+                  <img src="img/job-details-new/plus.svg" alt="" class="job-card__header-icon">
+                  <div class="job-description-side-bar__header-title">
+                    <a href="" class="h4" lang="nl">Interim GZ-Psycholoog <img src="img/job-details-new/next.svg"
+                        alt=""></a>
+                    <div class="sub-title">Healthcare</div>
+                  </div>
+                </div>
+
+                <div class="job-card__header-right">
+                  <div class="job-card__label">
+                    NEW!
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="job-card__details">
+                <div class="job-card__details-item">
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i1.svg" alt="">
+                  </div>
+                  3500 - 5000
+
+                </div>
+
+                <div class="dot"></div>
+
+                <div class="job-card__details-item">
+
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i2.svg" alt="">
+                  </div>
+                  Regio Arnhem
+
+                </div>
+
+                <div class="dot"></div>
+
+                <div class="job-card__details-item">
+
+                  <div class="side-bar__item-icon">
+                    <img src="img/job-details-new/i3.svg" alt="">
+                  </div>
+                  0 - 48 uur
+
+                </div>
+              </div>
+
+              <p>1 line description about current vacancy</p>
+              <div class="job-card__footer">
+                <a href="" class="btn btn_secundary">
+                  <img src="img/job-details-new/hand.svg" alt="">Bekijk vacature</a>
+              </div>
+
+            </div>
+
+            <div class="pagination">
+              <a href="#" class="pagination__prev"><i class="icon icon-arrow-left"></i></a>
+              <a href="#" class="active">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="#">6</a>
+              <a href="#">7</a>
+              <a href="#">8</a>
+              <a href="#">9</a>
+              <a href="#">...</a>
+              <a href="#">64</a>
+              
+              <a href="#" class="pagination__next"><i class="icon icon-arrow-right"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+    <!-- end vacancies content -->
+
+
+  </div>
+
+
+
+  <!-- start footer -->
+  <div class="footer">
+    <div class="footer__top">
+      <div class="container">
+        <i class="icon icon-lightning"></i>
+        <div class="footer__top-text">
+          <div><span>Lekker</span><span>dan</span></div>
+          <div>Vacaturevraagje?</div>
+          <div>
+            Geef ons een belletje op 0299 - 76 44 46 of mail naar
+            <a href="#">info@joinuz.nl</a>
+          </div>
+        </div>
+        <div class="footer__top-btns">
+          <a href="#" class="btn btn_sm btn_secundary">Contact</a>
+          <ul class="footer__socials">
+            <li>
+              <a href="#"><i class="icon icon-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="icon icon-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="icon icon-linkedin"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer__middle">
+      <div class="footer__left brick brick_left brick_primary">
+        <div class="footer-nav">
+          <div>
+            <div class="footer-nav__title">Omgeving & Recht</div>
+            <ul class="footer-nav__menu">
+              <li><a href="#">Juridische vacatures</a></li>
+              <li><a href="#">Vacatures overheid</a></li>
+              <li><a href="#">Werken voor de overheid</a></li>
+              <li><a href="#">Gemeente vacatures</a></li>
+              <li><a href="#">Werken bij Gemeente</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-nav__title">Zorg</div>
+            <ul class="footer-nav__menu">
+              <li><a href="#">Vacatures zorg</a></li>
+              <li><a href="#">Vacature verpleegkundige</a></li>
+              <li><a href="#">Vacatures in de zorg</a></li>
+              <li><a href="#">Verpleegkundige vacatures</a></li>
+              <li><a href="#"> Vacatures zorg en welzijn</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-nav__title">Sociaal Domein</div>
+            <ul class="footer-nav__menu">
+              <li><a href="#">Vacatures maatschappelijk werk</a></li>
+              <li><a href="#">Vacatures sociaal werk</a></li>
+              <li><a href="#">Beleidsmedewerker sociaal domein</a></li>
+              <li><a href="#">Sociaal domein vacature</a></li>
+              <li><a href="#">Detachering sociaal domein</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-contacts">
+          <strong>Joinuz Purmerend</strong>
+          Stationsweg 35, 1441 EJ Purmerend | 0299 - 76 44 46
+          <strong>Joinuz Gouda</strong>
+          Gouwe Westzijde 1, 2802 AN Gouda | 0182 - 222 000
+        </div>
+      </div>
+
+      <div class="footer__right brick brick_right brick_secundary">
+        <div class="footer-subnav">
+          <div class="footer-subnav__manu">
+            <ul>
+              <li><a href="#">Disclaimer</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Algemene voorwaarden</a></li>
+              <li><a href="#">CAO & Certificering</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">© 2019 - Joinuz</div>
+      </div>
+    </div>
+  </div>
+  <!-- end footer -->
+
+  <div class="lightbox" id="lightBox">
+    <div class="lightbox__window">
+      <button class="lightbox__close">
+        <i class="icon icon-close"></i>
+      </button>
+
+      <div class="lightbox__title">
+        <i class="icon icon-bell"></i>
+        <span>Altijd als 1e op de hoogte van de nieuwste vacatures als je een
+          job alert aanmaakt!</span>
+      </div>
+
+      <form action="">
+        <div class="form-group">
+          <div class="form-field form-field_select">
+            <label>Ik ben geïnteresseerd in</label>
+            <div class="select">
+              <select>
+                <option value="" disabled selected>
+                  Selecteer je vakgebied
+                </option>
+                <option value="1">First option</option>
+                <option value="2">Second option</option>
+                <option value="3">Third option</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field form-field_select">
+            <label>Bezorgopties</label>
+            <div class="select">
+              <select>
+                <option value="" disabled selected>
+                  Selecteer je vakgebied
+                </option>
+                <option value="1">First option</option>
+                <option value="2">Second option</option>
+                <option value="3">Third option</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="lightbox__form-controls">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" />
+              <span>Ik ga akkoord met de </span>
+            </label>
+          </div>
+          <label class="btn btn_md btn_primary switch">
+            Job alerts
+            <label>
+              <input type="checkbox" />
+              <span></span>
+            </label>
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+  </div>
+
+  <script src="js/vendors.js"></script>
+  <script src="js/scripts.js"></script>
+  <script>
+    $(function () {
+      if ($(document).width() < 1440) {
+        return false;
+      }
+
+      const config = {
+        animateClass: "animated",
+        offset: 200,
+        callback: () => {},
+      };
+      const wow = new WOW(config);
+
+      wow.init();
+    });
+  </script>
+
+  <script>
+    var $element = $('.footer');
+    let counter = 0;
+
+    $(window).scroll(function () {
+      var scroll = $(window).scrollTop() + $(window).height();
+      var offset = $element.offset().top
+
+      if (scroll > offset) {
+        $('.sticky-footer').removeClass('active');
+        counter = 1;
+
+      } else {
+        $('.sticky-footer').addClass('active');
+      }
+    });
+  </script>
+
+  <!-- start vacancies script -->
+  <script>
+    $(function () {
+      $(".vacancies-header__btn").click(function () {
+        $(".vacancies-header__btn").removeClass("active").eq($(this).index()).addClass("active");
+      }).eq(0).addClass("active");
+    });
+  </script>
+
+  <!-- end vacancies script -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+    $(function () {
+      $("#slider-range").slider({
+        range: true,
+        min: 0,
+        max: 100,
+        values: [0, 50],
+        slide: function (event, ui) {
+          $("#amount").val(ui.values[0] + "km");
+          $("#amount2").val(ui.values[1] + "km");
+        }
+      });
+      $(".amount-min").val($("#slider-range").slider("values", 0) + "km");
+      $(".amount-max").val($("#slider-range").slider("values", 1) + "km");
+    });
+
+    $('.checkbox-select__header input').click(function(){
+      $(this).parent().parent().toggleClass('active');
+      $(this).parent().parent().parent().find(".checkbox-list-hidden").toggleClass('active'); 
+    })
+
+    $('.see-more-filter__btn').click(function(){
+      $('.checkbox-select__wrapper').toggleClass('active');
+      $(this).toggleClass('active');
+    })
+
+    $( ".hours-input" ).on( "focus", function() {
+        $(this).parent().addClass('active');
+} );
+
+$('.mobile-filter-btn').click(function(){
+  $('.sidebar-content').toggleClass('active');
+  $('.vacancies-search-form-fix').toggleClass('active');
+})
+
+$('.filter-back-arrow').click(function(){
+  $('.sidebar-content').removeClass('active');
+  $('.vacancies-search-form-fix').removeClass('active');
+})
+
+ 
+
+  
+
+    
+  </script>
+
+</body>
+
+</html>
