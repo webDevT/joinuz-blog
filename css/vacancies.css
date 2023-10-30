@@ -173,10 +173,10 @@
 }
 .vacancies-sidebar {
   width: 480px;
-  position: -webkit-sticky;
+  /* position: -webkit-sticky;
   position: sticky;
   top: 100px;
-  height: auto;
+  height: auto; */
 }
 .vacancies-list {
   width: calc(100% - 480px);
