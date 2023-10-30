@@ -679,6 +679,9 @@ input::-webkit-inner-spin-button {
 .filter-back-arrow {
   display: none;
 }
+.filter-mobile-footer {
+  display: none;
+}
 @media (max-width: 1850px) {
   .content-job-details:before {
     left: -25vw;
