@@ -1,145 +1,239 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Joinuz</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css/vendors.css" />
-<link rel="stylesheet" type="text/css" href="css/styles.css" />
-<link rel="stylesheet" type="text/css" href="css/search.css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Joinuz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/vendors.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="css/search.css" />
 </head>
+<style>
+  .footer-nav__title {
+    /* border-top: 1px solid #8f8b86; */
+    margin-bottom: 16px;
+    padding-top: 16px;
+    position: relative;
+    padding-right: 30px;
+    display: flex;
+  }
+
+  .footer-nav__menu li a {
+    display: block;
+  }
+
+  .footer-nav__title:after {
+    bottom: 0;
+    content: "`";
+    font-family: Icons;
+    position: static;
+    right: 0;
+    padding-left: 10px;
+    transition: all 0.3s;
+    perspective: 10px;
+  }
+
+  .footer-nav__title.active::after {
+    transform: rotateX(180deg);
+  }
+
+  .footer-nav__menu {
+    display: none;
+  }
+
+  .footer-nav>div {
+    width: 30%;
+  }
+
+  @media screen and (max-width: 1240px) {
+    .footer-nav>div {
+      width: 100%;
+    }
+
+    .footer-nav__title:after {
+      position: absolute;
+    }
+  }
+
+  /* new css */
+  .footer-nav__title {
+    margin-bottom: 25px;
+  }
+  .group-title {
+    cursor: pointer;
+    font-weight: 500;
+    color: #fff;
+    padding-left: 10px;
+  }
+  .group-title:after {
+    bottom: 0;
+    content: "`";
+    font-family: Icons;
+    position: static;
+    right: 0;
+    padding-left: 5px;
+    transition: all 0.3s;
+    perspective: 10px;
+  }
+  .footer-nav__title:after {
+    display: none;
+  }
+  .footer-nav__menu {
+    margin-bottom: 10px;
+    display: block;
+    padding-left: 0;
+    padding-top: 0;
+  }
+  .group-title + .footer-nav__menu {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    padding-left: 0;
+    padding-top: 10px;
+}
+.group-title + .footer-nav__menu li a {
+  padding-left: 20px;
+}
+  /* new css */
+</style>
+
 <body>
   <div class="wrapper">
     <div class="sticky-nav">
-  <div class="container">
-    <div class="header-nav">
-      <div class="header-nav__logo">
-        <a href="#"><img src="img/logo.svg" alt=""></a>
-      </div>
-      <button class="header-nav__hamburger mobile-nav-btn js-mobile-nav-trigger">
-        <i class="icon icon-hamburger"></i>
-      </button>
-      <div class="header-nav__inner">
-        <div class="header-nav__inner-top">
-          <span>
-            <span class="color-secundary"><i class="icon icon-smiling-phone"></i>Lekker</span>
-            bellen met het leukste detacheringsbureau op 0299 - 76 44 46
-          </span>
-          <a href="#" class="header-nav__login">
-            <i class="icon icon-lock"></i>
-            Inloggen
-          </a>
-        </div>
-        <div class="header-nav__inner-bottom">
-          <ul>
-            <li class="parent"><a href="#vacatures" class="js-sticky-nav-trigger">Vacatures <i class="icon icon-arrow-down"></i></a></li>
-            <li><a href="#">Jouw droombaan</a></li>
-            <li class="parent"><a href="#over-ons" class="js-sticky-nav-trigger">Over ons <i class="icon icon-arrow-down"></i></a></li>
-          </ul>
-          <div class="header-nav__buttons">
-            <a href="#" class="btn btn_secundary btn_sm">Inschrijven</a>
-            <a href="#main" class="header-nav__hamburger js-sticky-nav-trigger">
-              <i class="icon icon-hamburger"></i>
-            </a>
+      <div class="container">
+        <div class="header-nav">
+          <div class="header-nav__logo">
+            <a href="#"><img src="img/logo.svg" alt=""></a>
+          </div>
+          <button class="header-nav__hamburger mobile-nav-btn js-mobile-nav-trigger">
+            <i class="icon icon-hamburger"></i>
+          </button>
+          <div class="header-nav__inner">
+            <div class="header-nav__inner-top">
+              <span>
+                <span class="color-secundary"><i class="icon icon-smiling-phone"></i>Lekker</span>
+                bellen met het leukste detacheringsbureau op 0299 - 76 44 46
+              </span>
+              <a href="#" class="header-nav__login">
+                <i class="icon icon-lock"></i>
+                Inloggen
+              </a>
+            </div>
+            <div class="header-nav__inner-bottom">
+              <ul>
+                <li class="parent"><a href="#vacatures" class="js-sticky-nav-trigger">Vacatures <i
+                      class="icon icon-arrow-down"></i></a></li>
+                <li><a href="#">Jouw droombaan</a></li>
+                <li class="parent"><a href="#over-ons" class="js-sticky-nav-trigger">Over ons <i
+                      class="icon icon-arrow-down"></i></a></li>
+              </ul>
+              <div class="header-nav__buttons">
+                <a href="#" class="btn btn_secundary btn_sm">Inschrijven</a>
+                <a href="#main" class="header-nav__hamburger js-sticky-nav-trigger">
+                  <i class="icon icon-hamburger"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="pulldown-nav">
-    <div class="container pulldown-nav__container">
-      <div class="pulldown-nav__title">
-        <div class="section-title section-title__on-light">
-  <div>Lekker</div>
-  <div>handig</div>
-  <div>Alles op een rijtje</div>
-</div>
-      </div>
-      <div class="pulldown-nav__mobile-btns">
-        <a href="#" class="btn btn_secundary btn_md">Inschrijven</a>
-        <a href="#" class="btn btn_secundary-light btn_sm"><i class="icon icon-lock"></i>Inloggen</a>
-      </div>
-      <div class="pulldown-nav__menu" data-sticky-nav="main">
-        <ul>
-          <li><a href="#">Certificring</a></li>
-          <li><a href="#">Werving & selectie</a></li>
-          <li><a href="#">Detachering</a></li>
-        </ul>
-        <ul>
-          <li><a href="#">Payrolling</a></li>
-          <li><a href="#">Mobiliteit</a></li>
-          <li><a href="#">Projecten & advies</a></li>
-        </ul>
-        <div class="pulldown-nav__cta-position">
-          <a href="#" class="btn btn_secundary-light btn_no-shadow">Kennismakingsgesprek</a>
-        </div>
-      </div>
-      <a href="#vacatures" class="pulldown-nav__mobile-link parent">Vacatures <i class="icon icon-arrow-down"></i></a>
-      <div class="pulldown-nav__menu" data-sticky-nav="vacatures">
-        <ul>
-          <li><a href="#">Werken bij de Overheid</a></li>
-          <li><a href="#">Werken bij de Gemeente</a></li>
-          <li><a href="#">Vacatures bij Joinuz</a></li>
-        </ul>
-        <ul>
-          <li><a href="#">Werken in de Zorg</a></li>
-          <li><a href="#">Vacatures Sociaal Domein</a></li>
-          <li><a href="#">Vacatures Omgeving & Recht</a></li>
-        </ul>
-        <div class="pulldown-nav__cta-position">
-          <a href="#" class="btn btn_secundary-light btn_no-shadow">Alle 241 vacatures</a>
-        </div>
-      </div>
-      <a href="#" class="pulldown-nav__mobile-link">Jouw droombaan</a>
-      <a href="#over-ons" class="pulldown-nav__mobile-link parent">Over ons <i class="icon icon-arrow-down"></i></a>
-      <div class="pulldown-nav__menu" data-sticky-nav="over-ons">
-        <ul>
-          <li><a href="#">Onze diensten</a></li>
-          <li><a href="#">Arbeidsvoorwaarden</a></li>
-          <li><a href="#">Onze mensen</a></li>
-        </ul>
-        <ul>
-          <li class="parent">
-            <a href="#">Joinuz voor jou</a>
+      <div class="pulldown-nav">
+        <div class="container pulldown-nav__container">
+          <div class="pulldown-nav__title">
+            <div class="section-title section-title__on-light">
+              <div>Lekker</div>
+              <div>handig</div>
+              <div>Alles op een rijtje</div>
+            </div>
+          </div>
+          <div class="pulldown-nav__mobile-btns">
+            <a href="#" class="btn btn_secundary btn_md">Inschrijven</a>
+            <a href="#" class="btn btn_secundary-light btn_sm"><i class="icon icon-lock"></i>Inloggen</a>
+          </div>
+          <div class="pulldown-nav__menu" data-sticky-nav="main">
+            <ul>
+              <li><a href="#">Certificring</a></li>
+              <li><a href="#">Werving & selectie</a></li>
+              <li><a href="#">Detachering</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Payrolling</a></li>
+              <li><a href="#">Mobiliteit</a></li>
+              <li><a href="#">Projecten & advies</a></li>
+            </ul>
+            <div class="pulldown-nav__cta-position">
+              <a href="#" class="btn btn_secundary-light btn_no-shadow">Kennismakingsgesprek</a>
+            </div>
+          </div>
+          <a href="#vacatures" class="pulldown-nav__mobile-link parent">Vacatures <i
+              class="icon icon-arrow-down"></i></a>
+          <div class="pulldown-nav__menu" data-sticky-nav="vacatures">
+            <ul>
+              <li><a href="#">Werken bij de Overheid</a></li>
+              <li><a href="#">Werken bij de Gemeente</a></li>
+              <li><a href="#">Vacatures bij Joinuz</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Werken in de Zorg</a></li>
+              <li><a href="#">Vacatures Sociaal Domein</a></li>
+              <li><a href="#">Vacatures Omgeving & Recht</a></li>
+            </ul>
+            <div class="pulldown-nav__cta-position">
+              <a href="#" class="btn btn_secundary-light btn_no-shadow">Alle 241 vacatures</a>
+            </div>
+          </div>
+          <a href="#" class="pulldown-nav__mobile-link">Jouw droombaan</a>
+          <a href="#over-ons" class="pulldown-nav__mobile-link parent">Over ons <i class="icon icon-arrow-down"></i></a>
+          <div class="pulldown-nav__menu" data-sticky-nav="over-ons">
             <ul>
               <li><a href="#">Onze diensten</a></li>
               <li><a href="#">Arbeidsvoorwaarden</a></li>
               <li><a href="#">Onze mensen</a></li>
             </ul>
-          </li>
-          <li><a href="#">Anderen over ons</a></li>
-          <li><a href="#">Werken als ZZP'er</a></li>
-        </ul>
-        
-        <div class="pulldown-nav__cta-position">
-          <a href="#" class="btn btn_secundary-light btn_no-shadow">Contact</a>
-        </div>
-      </div>
+            <ul>
+              <li class="parent">
+                <a href="#">Joinuz voor jou</a>
+                <ul>
+                  <li><a href="#">Onze diensten</a></li>
+                  <li><a href="#">Arbeidsvoorwaarden</a></li>
+                  <li><a href="#">Onze mensen</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Anderen over ons</a></li>
+              <li><a href="#">Werken als ZZP'er</a></li>
+            </ul>
 
-      <div class="pulldown-nav__mobile-contact">
-        <i class="icon icon-smiling-phone"></i>
-        <div>
-          <strong>
-            <span class="color-secundary">Lekker</span> bellen
-          </strong>
-          met ons op 0299 - 76 44 46
+            <div class="pulldown-nav__cta-position">
+              <a href="#" class="btn btn_secundary-light btn_no-shadow">Contact</a>
+            </div>
+          </div>
+
+          <div class="pulldown-nav__mobile-contact">
+            <i class="icon icon-smiling-phone"></i>
+            <div>
+              <strong>
+                <span class="color-secundary">Lekker</span> bellen
+              </strong>
+              met ons op 0299 - 76 44 46
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
     <div class="page-header">
       <div class="page-header__info">
         <div class="container">
           <div class="page-header__inner">
             <div class="section-title section-title_big">
-  <div>Lekker</div>
-  <div>lezen</div>
-  <div></div>
-</div>
+              <div>Lekker</div>
+              <div>lezen</div>
+              <div></div>
+            </div>
           </div>
         </div>
       </div>
@@ -148,7 +242,8 @@
     <div class="blogs-container">
       <i class="icon icon-book"></i>
       <div class="container blogs-content">
-        <a href="#" class="blogs-content__tile-big blogs-tile" style="background-image: url(./img/blogs_shutterstock.jpg)">
+        <a href="#" class="blogs-content__tile-big blogs-tile"
+          style="background-image: url(./img/blogs_shutterstock.jpg)">
           <div class="sidebar__topper">
             <span>Uitgelicht</span>
           </div>
@@ -158,23 +253,25 @@
           <div class="blogs-tile__overlay"></div>
         </a>
         <div class="blogs-content__tiles-group">
-          <a href="#" class="blogs-content__tile--small blogs-tile" style="background-image: url(./img/blogs_millenials.jpg)">
+          <a href="#" class="blogs-content__tile--small blogs-tile"
+            style="background-image: url(./img/blogs_millenials.jpg)">
             <h4 class="blogs-tile__title">5 Misverstanden over millenials</h4>
             <h6 class="blogs-tile__description">in Articelen</h6>
             <p class="blogs-tile__date">01-03-2019</p>
             <div class="blogs-tile__overlay"></div>
           </a>
           <a href="#" class="blogs-content__tile--small blogs-tile blogs-tile--dark">
-              <h4 class="blogs-tile__title">Vrijwilligerswerk is goed voor je cv</h4>
-              <h6 class="blogs-tile__description">in Tips & Tricks</h6>
-              <p class="blogs-tile__date">01-03-2019</p>
+            <h4 class="blogs-tile__title">Vrijwilligerswerk is goed voor je cv</h4>
+            <h6 class="blogs-tile__description">in Tips & Tricks</h6>
+            <p class="blogs-tile__date">01-03-2019</p>
           </a>
           <a href="#" class="blogs-content__tile--small--fullwidth blogs-tile blogs-tile--dark">
             <h4 class="blogs-tile__title">6 simpele stappen om jouw doelen te behalen.</h4>
             <h6 class="blogs-tile__description">in Articelen</h6>
             <p class="blogs-tile__date">01-03-2019</p>
           </a>
-          <a href="#" class="blogs-content__tile--small--fullwidth" style="background-image: url(./img/header-downloads.jpg)"></a>
+          <a href="#" class="blogs-content__tile--small--fullwidth"
+            style="background-image: url(./img/header-downloads.jpg)"></a>
         </div>
       </div>
     </div>
@@ -204,7 +301,7 @@
     <div class="readding">
       <i class="icon icon-pen"></i>
       <div class="container">
-         
+
 
         <div class="filter-wrapper">
 
@@ -213,299 +310,403 @@
               Zoeken
             </div>
             <div class="form-group search-input-wrapper">
-           
-            <div class="form-field form-field--input">
-              <div class="form-field__with-button">
-                <input type="text" placeholder=" Zoeken naar een blog" class="search-input">
-                <button><i class="icon icon-search"></i></button>
+
+              <div class="form-field form-field--input">
+                <div class="form-field__with-button">
+                  <input type="text" placeholder=" Zoeken naar een blog" class="search-input">
+                  <button><i class="icon icon-search"></i></button>
+                </div>
               </div>
             </div>
-          </div>
           </div>
 
           <div class="filter-col ">
             <div class="filter-title">
               Filteren
             </div>
-<div class="blog-category-tabs">
-            <div class="blog-category-tab active">
-              Tips & Tricks
-            </div>
-            <div class="blog-category-tab">
-              Articelen
+            <div class="blog-category-tabs">
+              <div class="blog-category-tab active">
+                Tips & Tricks
+              </div>
+              <div class="blog-category-tab">
+                Articelen
 
-            </div>
-            <div class="blog-category-tab">
-              Whitepapers
-            </div>
-            <div class="blog-category-tab">
-              Joinuz vertelt
+              </div>
+              <div class="blog-category-tab">
+                Whitepapers
+              </div>
+              <div class="blog-category-tab">
+                Joinuz vertelt
+              </div>
             </div>
           </div>
-          </div>
 
-          
-            
 
-          
+
+
+
         </div>
 
-        
-          <script
-  src="https://code.jquery.com/jquery-3.7.0.min.js"
-  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
-  crossorigin="anonymous"></script>
-          <script>
-            $('.blog-category-tab').click(function(){
-              $('.blog-category-tab').removeClass('active');
-    $(this).addClass('active');
-})
-          </script>
+
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+          integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+        <script>
+          $('.blog-category-tab').click(function () {
+            $('.blog-category-tab').removeClass('active');
+            $(this).addClass('active');
+          })
+        </script>
 
 
-          <div class="readding__grid">
-            <a href="#" class="readding__grid-item blogs-tile" style="background-image: url(./img/blogs_image_1.png)">
-              <h4 class="blogs-tile__title">Zo word jij 100% tech ready</h4>
-              <h6 class="blogs-tile__description">in Whitepapers</h6>
-              <p class="blogs-tile__date">01-03-2019</p>
-            </a>
-            <a href="#" class="readding__grid-item blogs-tile" style="background-image: url(./img/blogs_image_2.png)">
-              <h4 class="blogs-tile__title">5 Misverstanden over millenials</h4>
-              <h6 class="blogs-tile__description">in Whitepapers</h6>
-              <p class="blogs-tile__date">01-03-2019</p>
-            </a>
-            <a href="#" class="readding__grid-item blogs-tile" style="background-image: url(./img/blogs_image_3.png)">
-              <h4 class="blogs-tile__title">5 Tips voor een goede werk- privébalans</h4>
-              <h6 class="blogs-tile__description">in Whitepapers</h6>
-              <p class="blogs-tile__date">01-03-2019</p>
-            </a>
-            <a href="#" class="readding__grid-item blogs-tile" style="background-image: url(./img/blogs_image_4.png)">
-              <h4 class="blogs-tile__title">5 Tips voor een goede werk- privébalans</h4>
-              <h6 class="blogs-tile__description">in Whitepapers</h6>
-              <p class="blogs-tile__date">01-03-2019</p>
-            </a>
-            <a href="#" class="readding__grid-item blogs-tile" style="background-image: url(./img/blogs_image_5.png)">
-              <h4 class="blogs-tile__title">5 Tips voor een goede werk- privébalans</h4>
-              <h6 class="blogs-tile__description">in Whitepapers</h6>
-              <p class="blogs-tile__date">01-03-2019</p>
-            </a>
-            <a href="#" class="readding__grid-item blogs-tile" style="background-image: url(./img/blogs_image_1.png)">
-              <h4 class="blogs-tile__title">5 Tips voor een goede werk- privébalans</h4>
-              <h6 class="blogs-tile__description">in Whitepapers</h6>
-              <p class="blogs-tile__date">01-03-2019</p>
-            </a>
-          </div>
+        <div class="readding__grid">
+          <a href="#" class="readding__grid-item blogs-tile" style="background-image: url(./img/blogs_image_1.png)">
+            <h4 class="blogs-tile__title">Zo word jij 100% tech ready</h4>
+            <h6 class="blogs-tile__description">in Whitepapers</h6>
+            <p class="blogs-tile__date">01-03-2019</p>
+          </a>
+          <a href="#" class="readding__grid-item blogs-tile" style="background-image: url(./img/blogs_image_2.png)">
+            <h4 class="blogs-tile__title">5 Misverstanden over millenials</h4>
+            <h6 class="blogs-tile__description">in Whitepapers</h6>
+            <p class="blogs-tile__date">01-03-2019</p>
+          </a>
+          <a href="#" class="readding__grid-item blogs-tile" style="background-image: url(./img/blogs_image_3.png)">
+            <h4 class="blogs-tile__title">5 Tips voor een goede werk- privébalans</h4>
+            <h6 class="blogs-tile__description">in Whitepapers</h6>
+            <p class="blogs-tile__date">01-03-2019</p>
+          </a>
+          <a href="#" class="readding__grid-item blogs-tile" style="background-image: url(./img/blogs_image_4.png)">
+            <h4 class="blogs-tile__title">5 Tips voor een goede werk- privébalans</h4>
+            <h6 class="blogs-tile__description">in Whitepapers</h6>
+            <p class="blogs-tile__date">01-03-2019</p>
+          </a>
+          <a href="#" class="readding__grid-item blogs-tile" style="background-image: url(./img/blogs_image_5.png)">
+            <h4 class="blogs-tile__title">5 Tips voor een goede werk- privébalans</h4>
+            <h6 class="blogs-tile__description">in Whitepapers</h6>
+            <p class="blogs-tile__date">01-03-2019</p>
+          </a>
+          <a href="#" class="readding__grid-item blogs-tile" style="background-image: url(./img/blogs_image_1.png)">
+            <h4 class="blogs-tile__title">5 Tips voor een goede werk- privébalans</h4>
+            <h6 class="blogs-tile__description">in Whitepapers</h6>
+            <p class="blogs-tile__date">01-03-2019</p>
+          </a>
+        </div>
       </div>
     </div>
 
     <div class="container blogs-paginagtion-container">
-        <div class="pagination">
-  <a href="#" class="pagination__prev disabled"><i class="icon icon-arrow-left"></i></a>
-  <a href="#" class="active">1</a>
-  <a href="#">2</a>
-  <a href="#">3</a>
-  <a href="#" class="pagination__next"><i class="icon icon-arrow-right"></i></a>
-</div>
+      <div class="pagination">
+        <a href="#" class="pagination__prev disabled"><i class="icon icon-arrow-left"></i></a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#" class="pagination__next"><i class="icon icon-arrow-right"></i></a>
+      </div>
     </div>
 
     <section class="homepage-form-block blogs-form">
-        <div class="bg-dark">
-          <div class="container">
-            <i class="icon icon-bell wow fadeInUp"></i>
-            <div class="homepage-form-block__title">
-              <div class="section-title @@className">
-  <div>Lekker</div>
-  <div>up-to-date</div>
-  <div>Altijd als 1e op de hoogte van de nieuwste vacatures als je een job alert aanmaakt!</div>
-</div>
-            </div>
-            <div class="homepage-form-block__img"></div>
-            <div class="homepage-form-block__form">
-              <form id="homeContactForm" action="">
-                <div class="form-group">
-                  <div class="form-field form-field_select">
-                    <label>Ik ben geïnteresseerd in</label>
-                    <div class="select">
-                      <select data-depends-with="#additionalFormPart">
-                        <option value="" disabled selected>Selecteer je vakgebied</option>
-                        <option value="1">First option</option>
-                        <option value="2">Second option</option>
-                        <option value="3">Third option</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-field form-field_select">
-                    <label>Bezorg opties</label>
-                    <div class="select">
-                      <select data-depends-with="#additionalFormPart">
-                        <option value="" disabled selected>Selecteer je vakgebied</option>
-                        <option value="1">First option</option>
-                        <option value="2">Second option</option>
-                        <option value="3">Third option</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div id="additionalFormPart" class="form-group homepage-form-block__hidden-group">
-                  <div class="form-field form-field_select">
-                    <label>Afleveradres</label>
-                    <input type="text">
-                  </div>
-                  <div class="form-field">
-                    <div class="checkbox">
-                      <label class="checkbox__label">
-                        <input type="checkbox">
-                        <span>Ik ga akkoord met de </span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="homepage-form-block__btn-block">
-              <label id="submitHomeContactForm" class="btn btn_md btn_primary btn_splash switch disabled">
-                Zet aan
-                <label>
-                  <input type="checkbox">
-                  <span></span>
-                </label>
-              </label>
+      <div class="bg-dark">
+        <div class="container">
+          <i class="icon icon-bell wow fadeInUp"></i>
+          <div class="homepage-form-block__title">
+            <div class="section-title @@className">
+              <div>Lekker</div>
+              <div>up-to-date</div>
+              <div>Altijd als 1e op de hoogte van de nieuwste vacatures als je een job alert aanmaakt!</div>
             </div>
           </div>
+          <div class="homepage-form-block__img"></div>
+          <div class="homepage-form-block__form">
+            <form id="homeContactForm" action="">
+              <div class="form-group">
+                <div class="form-field form-field_select">
+                  <label>Ik ben geïnteresseerd in</label>
+                  <div class="select">
+                    <select data-depends-with="#additionalFormPart">
+                      <option value="" disabled selected>Selecteer je vakgebied</option>
+                      <option value="1">First option</option>
+                      <option value="2">Second option</option>
+                      <option value="3">Third option</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-field form-field_select">
+                  <label>Bezorg opties</label>
+                  <div class="select">
+                    <select data-depends-with="#additionalFormPart">
+                      <option value="" disabled selected>Selecteer je vakgebied</option>
+                      <option value="1">First option</option>
+                      <option value="2">Second option</option>
+                      <option value="3">Third option</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div id="additionalFormPart" class="form-group homepage-form-block__hidden-group">
+                <div class="form-field form-field_select">
+                  <label>Afleveradres</label>
+                  <input type="text">
+                </div>
+                <div class="form-field">
+                  <div class="checkbox">
+                    <label class="checkbox__label">
+                      <input type="checkbox">
+                      <span>Ik ga akkoord met de </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="homepage-form-block__btn-block">
+            <label id="submitHomeContactForm" class="btn btn_md btn_primary btn_splash switch disabled">
+              Zet aan
+              <label>
+                <input type="checkbox">
+                <span></span>
+              </label>
+            </label>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
     <div class="footer">
-  <div class="footer__top">
-    <div class="container">
-      <i class="icon icon-lightning"></i>
-      <div class="footer__top-text">
-        <div><span>Lekker</span><span>dan</span></div>
-        <div>Vacaturevraagje?</div>
-        <div>Geef ons een belletje op 0299 - 76 44 46 of mail naar <a href="#">info@joinuz.nl</a></div>
-      </div>
-      <div class="footer__top-btns">
-        <a href="#" class="btn btn_sm btn_secundary">Contact</a>
-        <ul class="footer__socials">
-          <li><a href="#"><i class="icon icon-facebook"></i></a></li>
-          <li><a href="#"><i class="icon icon-instagram"></i></a></li>
-          <li><a href="#"><i class="icon icon-linkedin"></i></a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="container footer__middle">
-    <div class="footer__left brick brick_left brick_primary">
-      <div class="footer-nav">
-        <div>
-          <div class="footer-nav__title">Omgeving & Recht</div>
-          <ul class="footer-nav__menu">
-            <li><a href="#">Juridische vacatures</a></li>
-            <li><a href="#">Vacatures overheid</a></li>
-            <li><a href="#">Werken voor de overheid</a></li>
-            <li><a href="#">Gemeente vacatures</a></li>
-            <li><a href="#">Werken bij Gemeente</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer-nav__title">Zorg</div>
-          <ul class="footer-nav__menu">
-            <li><a href="#">Vacatures zorg</a></li>
-            <li><a href="#">Vacature verpleegkundige</a></li>
-            <li><a href="#">Vacatures in de zorg</a></li>
-            <li><a href="#">Verpleegkundige vacatures</a></li>
-            <li><a href="#"> Vacatures zorg en welzijn</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer-nav__title">Sociaal Domein</div>
-          <ul class="footer-nav__menu">
-            <li><a href="#">Vacatures maatschappelijk werk</a></li>
-            <li><a href="#">Vacatures sociaal werk</a></li>
-            <li><a href="#">Beleidsmedewerker sociaal domein</a></li>
-            <li><a href="#">Sociaal domein vacature</a></li>
-            <li><a href="#">Detachering sociaal domein</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-contacts">
-        <strong>Joinuz Purmerend</strong>
-        Stationsweg 35, 1441 EJ Purmerend  |  0299 - 76 44 46
-        <strong>Joinuz Gouda</strong>
-        Gouwe Westzijde 1, 2802 AN Gouda  |  0182 - 222 000
-      </div>
-    </div>
-
-    <div class="footer__right brick brick_right brick_secundary">
-      <div class="footer-subnav">
-        <div class="footer-subnav__manu">
-          <ul>
-            <li><a href="#">Disclaimer</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Algemene voorwaarden</a></li>
-            <li><a href="#">CAO & Certificering</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="copyright">© 2019 - Joinuz</div>
-    </div>
-  </div>
-</div>
-
-<div class="lightbox" id="lightBox">
-  <div class="lightbox__window">
-    <button class="lightbox__close"><i class="icon icon-close"></i></button>
-
-    <div class="lightbox__title">
-      <i class="icon icon-bell"></i>
-      <span>Altijd als 1e op de hoogte van de nieuwste vacatures als je een job alert aanmaakt!</span>
-    </div>
-
-    <form action="">
-      <div class="form-group">
-        <div class="form-field form-field_select">
-          <label>Ik ben geïnteresseerd in</label>
-          <div class="select">
-            <select>
-              <option value="" disabled selected>Selecteer je vakgebied</option>
-              <option value="1">First option</option>
-              <option value="2">Second option</option>
-              <option value="3">Third option</option>
-            </select>
+      <div class="footer__top">
+        <div class="container">
+          <i class="icon icon-lightning"></i>
+          <div class="footer__top-text">
+            <div><span>Lekker</span><span>dan</span></div>
+            <div>Vacaturevraagje?</div>
+            <div>Geef ons een belletje op 0299 - 76 44 46 of mail naar <a href="#">info@joinuz.nl</a></div>
           </div>
-        </div>
-        <div class="form-field form-field_select">
-          <label>Bezorgopties</label>
-          <div class="select">
-            <select>
-              <option value="" disabled selected>Selecteer je vakgebied</option>
-              <option value="1">First option</option>
-              <option value="2">Second option</option>
-              <option value="3">Third option</option>
-            </select>
+          <div class="footer__top-btns">
+            <a href="#" class="btn btn_sm btn_secundary">Contact</a>
+            <ul class="footer__socials">
+              <li><a href="#"><i class="icon icon-facebook"></i></a></li>
+              <li><a href="#"><i class="icon icon-instagram"></i></a></li>
+              <li><a href="#"><i class="icon icon-linkedin"></i></a></li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="lightbox__form-controls">
-        <div class="checkbox">
-          <label>
-            <input type="checkbox">
-            <span>Ik ga akkoord met de </span>
-          </label>
+
+      <!-- start new html -->
+
+
+
+      <div class="container footer__middle">
+        <div class="footer__left brick brick_left brick_primary">
+          
+          <div class="footer-nav">
+            <div>
+              <div class="footer-nav__title">Fysiek Domein</div>
+              <div class="group-title">Fysiek Domein</div>
+              <ul class="footer-nav__menu">
+                <li><a href="https://www.joinuz.nl/bouwplantoetser-wabo-casemanager">Bouwplantoetser / Wabo
+                    casemanager</a></li>
+                <li><a href="https://www.joinuz.nl/verkeerskundige-adviseur-mobiliteit">Verkeerskundige / Adviseur
+                    Mobiliteit</a></li>
+                <li><a href="https://www.joinuz.nl/vergunningverlener-apv">Vergunningverlener APV</a></li>
+                <li><a href="https://www.joinuz.nl/traineeship/ruimtelijke-ordening">Traineeship Ruimtelijke
+                    Ordening</a></li>
+                <li><a href="https://www.joinuz.nl/handhavingsjurist">Handhavingsjurist</a></li>
+                
+              </ul>
+
+              <div class="group-title">Fysiek Domein</div>
+              <ul class="footer-nav__menu">
+               
+                <li><a href="https://www.joinuz.nl/vacatures-overheid">Vacatures Overheid</a></li>
+                <li><a href="https://www.joinuz.nl/werken-bij-de-gemeente">Werken bij de Gemeente</a></li>
+                <li><a href="https://www.joinuz.nl/juridische-vacatures">Juridische vacatures</a></li>
+                <li><a href="https://www.joinuz.nl/lekker-bouwen-aan-je-carriere">Lekker bouwen aan je carrière bij
+                    Joinuz</a></li>
+                <li><a href="https://www.joinuz.nl/gemeentebanen">Gemeentebanen</a></li>
+                <li><a href="https://www.joinuz.nl/vacatures-fysiek-domein">Vacatures Fysiek Domein</a></li>
+                <li><a href="https://www.joinuz.nl/vacatures-ro-adviseurs">Vacatures RO-adviseurs</a></li>
+                <li><a href="https://www.joinuz.nl/werken-bij-de-overheid">Werken bij de Overheid</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="footer-nav__title">Sociaal Domein</div>
+              <div class="group-title">Fysiek Domein</div>
+              <ul class="footer-nav__menu">
+                <li><a href="https://www.joinuz.nl/beleidsadviseur-sociaal-domein">Beleidsadviseur Sociaal Domein</a>
+                </li>
+                <li><a href="https://www.joinuz.nl/vacatures-wmo-consulent">Vacatures WMO-consulent</a></li>
+                <li><a href="https://www.joinuz.nl/jeugdconsulent">Jeugdconsulent</a></li>
+                <li><a href="https://www.joinuz.nl/gemeentebanen">Gemeentebanen</a></li>
+                <li><a href="https://www.joinuz.nl/vacatures-maatschappelijk-werk">Vacatures maatschappelijk werk</a>
+                </li>
+               
+              </ul>
+
+              <div class="group-title">Fysiek Domein</div>
+              <ul class="footer-nav__menu">
+                
+                <li><a href="https://www.joinuz.nl/vacatures-inkomensconsulent">Vacatures Inkomensconsulent</a></li>
+                <li><a href="https://www.joinuz.nl/werken-bij-de-gemeente">Werken bij de Gemeente</a></li>
+                <li><a href="https://www.joinuz.nl/vacatures-sociaal-domein">Vacatures Sociaal Domein</a></li>
+                <li><a href="https://www.joinuz.nl/werken-bij-de-overheid">Werken bij de Overheid</a></li>
+              </ul>
+
+              <div class="footer-nav__title">Belastingen</div>
+              <div class="group-title">Fysiek Domein</div>
+              <ul class="footer-nav__menu">
+                <li><a href="https://www.joinuz.nl/vakgebied-belastingen">Vacatures Belastingen</a></li>
+                <li><a href="https://www.joinuz.nl/vacatures-overheid">Vacatures Overheid</a></li>
+                <li><a href="https://www.joinuz.nl/werken-bij-de-gemeente">Werken bij de Gemeente</a></li>
+              </ul>
+              <div class="group-title">Fysiek Domein</div>
+              <ul class="footer-nav__menu">
+                <li><a href="https://www.joinuz.nl/vakgebied-belastingen">Vacatures Belastingen</a></li>
+                <li><a href="https://www.joinuz.nl/vacatures-overheid">Vacatures Overheid</a></li>
+                <li><a href="https://www.joinuz.nl/werken-bij-de-gemeente">Werken bij de Gemeente</a></li>
+              </ul>
+            </div>
+
+
+            <div>
+              <div class="footer-nav__title">Wonen</div>
+              <div class="group-title">Fysiek Domein</div>
+              <ul class="footer-nav__menu">
+                <li><a href="https://www.joinuz.nl/verhuurmakelaar">Verhuurmakelaar</a></li>
+                <li><a href="https://www.joinuz.nl/gemeentebanen">Gemeentebanen</a></li>
+                <li><a href="/zoek?vakgebied=wonen">Vacatures wonen</a></li>
+                <li><a href="https://www.joinuz.nl/vacatures-overheid">Vacatures Overheid</a></li>
+                <li><a href="https://www.joinuz.nl/werken-bij-de-gemeente">Werken bij de Gemeente</a></li>
+                <li><a href="https://www.joinuz.nl/lekker-bouwen-aan-je-carriere">Lekker bouwen aan je carrière bij
+                    Joinuz</a></li>
+                <li><a href="https://www.joinuz.nl/werken-bij-de-overheid">Werken bij de Overheid</a></li>
+              </ul>
+              <div class="group-title">Fysiek Domein</div>
+              <ul class="footer-nav__menu">
+                <li><a href="https://www.joinuz.nl/verhuurmakelaar">Verhuurmakelaar</a></li>
+                <li><a href="https://www.joinuz.nl/gemeentebanen">Gemeentebanen</a></li>
+                <li><a href="/zoek?vakgebied=wonen">Vacatures wonen</a></li>
+                <li><a href="https://www.joinuz.nl/vacatures-overheid">Vacatures Overheid</a></li>
+                <li><a href="https://www.joinuz.nl/werken-bij-de-gemeente">Werken bij de Gemeente</a></li>
+                <li><a href="https://www.joinuz.nl/lekker-bouwen-aan-je-carriere">Lekker bouwen aan je carrière bij
+                    Joinuz</a></li>
+                <li><a href="https://www.joinuz.nl/werken-bij-de-overheid">Werken bij de Overheid</a></li>
+              </ul>
+              <div class="footer-nav__title">Zorg</div>
+     
+              <ul class="footer-nav__menu">
+                <li><a href="https://www.joinuz.nl/werken-in-de-zorg">Werken in de zorg</a></li>
+                <li><a href="https://www.joinuz.nl/jeugdzorgwerker-met-skj">Jeugdzorgwerker met SKJ</a></li>
+                <li><a href="https://www.joinuz.nl/verzorgende-ig-vacatures">Verzorgende IG vacatures</a></li>
+                <li><a href="https://www.joinuz.nl/vacatures-zorg">Vacatures Zorg</a></li>
+                
+              </ul>
+             
+            </div>
+          </div>
+
+          <div class="footer-contacts">
+            <strong>Joinuz Purmerend</strong>
+            Stationsweg 35, 1441 EJ Purmerend | 0299 - 76 44 46
+            <strong>Joinuz Gouda</strong>
+            Gouwe Westzijde 1, 2802 AN Gouda | 0182 - 222 000
+          </div>
         </div>
-        <label class="btn btn_md btn_primary switch">
-          Job alerts
-          <label>
-            <input type="checkbox">
-            <span></span>
-          </label>
-        </label>
+
+        <div class="footer__right brick brick_right brick_secundary">
+          <div class="footer-subnav">
+            <div class="footer-subnav__manu">
+              <ul>
+                <li><a href="#">Disclaimer</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Algemene voorwaarden</a></li>
+                <li><a href="#">CAO & Certificering</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="copyright">© 2019 - Joinuz</div>
+        </div>
       </div>
-    </form>
-  </div>
-</div>
+    </div>
+
+    <div class="lightbox" id="lightBox">
+      <div class="lightbox__window">
+        <button class="lightbox__close"><i class="icon icon-close"></i></button>
+
+        <div class="lightbox__title">
+          <i class="icon icon-bell"></i>
+          <span>Altijd als 1e op de hoogte van de nieuwste vacatures als je een job alert aanmaakt!</span>
+        </div>
+
+        <form action="">
+          <div class="form-group">
+            <div class="form-field form-field_select">
+              <label>Ik ben geïnteresseerd in</label>
+              <div class="select">
+                <select>
+                  <option value="" disabled selected>Selecteer je vakgebied</option>
+                  <option value="1">First option</option>
+                  <option value="2">Second option</option>
+                  <option value="3">Third option</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-field form-field_select">
+              <label>Bezorgopties</label>
+              <div class="select">
+                <select>
+                  <option value="" disabled selected>Selecteer je vakgebied</option>
+                  <option value="1">First option</option>
+                  <option value="2">Second option</option>
+                  <option value="3">Third option</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="lightbox__form-controls">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox">
+                <span>Ik ga akkoord met de </span>
+              </label>
+            </div>
+            <label class="btn btn_md btn_primary switch">
+              Job alerts
+              <label>
+                <input type="checkbox">
+                <span></span>
+              </label>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
   <script class="js/search.js"></script>
+  <script>
+    $('.footer-nav__title').click(function () {
+      $(this).next('.footer-nav__menu').slideToggle();
+      $(this).toggleClass('active');
+    });
+  </script>
+
+  <!-- start new js -->
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+    var groupTitles = document.querySelectorAll('.group-title');
+
+    groupTitles.forEach(function(title) {
+        title.addEventListener('click', function() {
+            var menu = this.nextElementSibling;
+            if (menu.style.maxHeight && menu.style.maxHeight !== '0px') {
+                menu.style.maxHeight = '0';
+            } else {
+                menu.style.maxHeight = menu.scrollHeight + 'px';
+            }
+        });
+    });
+});
+  </script>
+  <!-- end new js -->
 </body>
+
 </html>

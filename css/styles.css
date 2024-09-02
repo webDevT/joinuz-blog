@@ -5351,7 +5351,8 @@ input[type=password] {
       height: 75px;
       background: #191919;
       top: 100%;
-      left: -20px; } }
+      left: -20px; }
+  }
 
 .jo-overview-header {
   width: 100%;
@@ -5364,14 +5365,11 @@ input[type=password] {
   -ms-flex-pack: center;
   justify-content: center;
   padding-top: 90px;
-  position: relative; }
-  @media screen and (max-width: 1240px) {
-    .jo-overview-header {
-      padding: 0;
-      height: 225px;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center; } }
+  position: relative;
+
+}
+
+
   .jo-overview-header .section-title {
     position: relative; }
     .jo-overview-header .section-title:before {
@@ -5393,7 +5391,9 @@ input[type=password] {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+
+}
   @media screen and (max-width: 1240px) {
     .jo-overview-container {
       display: block; } }
@@ -8013,3 +8013,4 @@ text-section__item
   padding: 5px 10px;
   border-radius: 10px;
   font-weight: 400; }
+
