@@ -267,7 +267,7 @@
    <!-- start what we do page -->
    <div class="what-we-do">
     <!-- start main screen -->
-    <section class="job-details-main-screen">
+    <section class="vacancies-main-screen job-details-main-screen">
     <div class="container">
      
    
@@ -574,7 +574,7 @@ id sem sollicitudin dignissim.
           <div class="video-btn">
 <img src="img/what-we-do/video-btn.svg" alt="" class="">
           </div>
-          
+          <iframe src="https://www.youtube.com/embed/668nUCeBHyY?si=MAe4wzbjEzqeaTQq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           
         </div>
       </div>
@@ -1046,11 +1046,11 @@ id sem sollicitudin dignissim.Donec nulla est.
 
 
   <!-- start video modal -->
-  <div class="video-modal">
+  <!-- <div class="video-modal">
     <div class="video-modal-content">
       <iframe src="https://www.youtube.com/embed/668nUCeBHyY?si=MAe4wzbjEzqeaTQq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-  </div>
+  </div> -->
   <!-- end video modal -->
 
 
@@ -1153,6 +1153,17 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- end slick slide init -->
 
 
+  <script>
+    $('.video-btn').click(function(){
+      $(this).fadeOut(); // Fade out the button
+      $('.video-wrapper__img').fadeOut(); // Fade out the image overlay
+
+      // Play the video by adding the autoplay parameter to the iframe's src
+      let iframe = $('.video-wrapper iframe');
+      let src = iframe.attr('src');
+      iframe.attr('src', src + '&autoplay=1');
+    });
+</script>
 </body>
 
 </html>
