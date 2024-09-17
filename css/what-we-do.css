@@ -477,11 +477,11 @@
 }
 .prev-btn {
   left: 0vw;
-  transform: translateY(-50%) translateX(50%);
+  transform: translateY(-50%) translateX(25%);
 }
 .next-btn {
   right: 0vw;
-  transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-25%);
 }
 /* end testimonials section */
 
