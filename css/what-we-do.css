@@ -422,18 +422,19 @@
   justify-content: center;
   margin-top: 2vw;
   margin-bottom: 2vw;
+  padding-bottom: 1.5vw;
 }
 .testimonials__text {
-  font-size: 1.563vw;
-  width: 48.438vw;
+  font-size: 1.3vw;
+  width: 90%;
   line-height: 1.5;
 }
 .slider-item__content {
-  transform: scale(0.85);
+  transform: scale(0.9);
   opacity: 0.8;
 }
 .slick-center .slider-item__content {
-  transform: scale(1.05);
+  transform: scale(1);
   transition: all 0.5s;
   opacity: 1;
 }
@@ -452,7 +453,7 @@
   display: flex;
   align-items: center;
   text-align: left;
-  margin-top: 1.563vw;
+  margin-top: 1.2vw;
 }
 .testimonials__author-name {
   font-size: 1.53vw;
@@ -475,12 +476,12 @@
   z-index: 999;
 }
 .prev-btn {
-  left: 18.5vw;
-  transform: translateY(-50%) translateX(-50%);
+  left: 0vw;
+  transform: translateY(-50%) translateX(50%);
 }
 .next-btn {
-  right: 18.5vw;
-  transform: translateY(-50%) translateX(50%);
+  right: 0vw;
+  transform: translateY(-50%) translateX(-50%);
 }
 /* end testimonials section */
 
@@ -583,12 +584,13 @@
   justify-content: space-between;
   width: 100%;
 }
-.form-section .form-row--two .input-wrapper {
-  width: 48%;
+.form-section .input-wrapper {
+  width: 33%;
+  margin-left: 15px;
 }
-.form-section .form-row .input-wrapper--xs {
+/* .form-section .form-row .input-wrapper--xs {
   width: 27%;
-}
+} */
 .line {
   height: 50px;
 }
@@ -803,7 +805,7 @@
       margin-bottom: 12px;
     }
     .slider-item__content {
-      height: 27vw;
+      height: 45vw;
     }
     .prev-btn {
       left: 8vw;
@@ -815,17 +817,20 @@
       width: 4vw;
     }
     .testimonials__text {
-      font-size: 2vw;
+      font-size: 2.9vw;
     }
     .testimonials__text {
       width: 60vw;
+    }
+    .testimonials__author-wrapper {
+      margin-top: 3vw;
     }
     .testimonials__author-photo {
       width: 8vw;
       height: 8vw;
     }
     .testimonials__author-name {
-      font-size: 1.8vw;
+      font-size: 2vw;
     }
     .testimonials__author-position {
       font-size: 2.4vw;
@@ -928,13 +933,14 @@
       background: url('../img/what-we-do/slider-mob-bg.svg');
       background-repeat: no-repeat;
       background-size: 100%;
-      height: 105vw;
+      height: 84vw;
       margin-top: 4vw;
       margin-bottom: 4vw;
+      padding-bottom: 4.5vw;
     }
     .testimonials__text {
-      font-size: 4.533vw;
-      width: 64vw;
+      font-size: 4.267vw;
+      width: 66vw;
     }
     .testimonials__author-photo {
       width: 18.667vw;
@@ -950,7 +956,7 @@
       font-size: 4.533vw;
     }
     .testimonials__author-wrapper {
-      margin-top: 8.533vw;
+      margin-top: 5vw;
     }
     .slider-btn {
       width: 9.6vw;
@@ -1043,12 +1049,12 @@
       background-position: left 10px center;
     }
     .next-btn {
-      transform: translateY(-100%) translateX(150%);
+      transform: translateY(-128%) translateX(150%);
     }
     .prev-btn {
-      transform: translateY(-100%) translateX(-150%);
+      transform: translateY(-128%) translateX(-150%);
     }
-    .job-details-main-screen .main-screen__img-wrapper {
+    .text-image-section.job-details-main-screen .main-screen__img-wrapper {
       display: block;
     }
     .job-details-main-screen .main-screen__img {
@@ -1120,6 +1126,10 @@
     }
     .form-section .form-row--two .input-wrapper {
       margin-top: 0;
+    }
+    .form-section .input-wrapper {
+      width: 100%;
+      margin-left: 0;
     }
 
 
@@ -1259,6 +1269,13 @@
   .job-details-main-screen__content {
     padding-top: 100px;
   }
+  .next-btn {
+    transform: translateY(-50%) translateX(0%);
+  }
+  .prev-btn {
+    transform: translateY(-50%) translateX(0%);
+  }
+  
   
 
   
@@ -1273,6 +1290,25 @@
   .vacancies-main-screen .text-30 {
     max-width: 100%;
     width: 100%;
+  }
+  .mt-50 {
+    margin-top: 30px;
+  }
+  .help-section {
+    padding-bottom: 28px;
+  }
+  .active-section {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+  .section-video {
+    padding-top: 28px;
+  }
+  .next-btn {
+    transform: translateY(-120%) translateX(140%);
+  }
+  .prev-btn {
+    transform: translateY(-120%) translateX(-140%);
   }
 
 }

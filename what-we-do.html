@@ -853,12 +853,19 @@ id sem sollicitudin dignissim.Donec nulla est.
 
           </div>
 
-          <div class="form-row form-row--two">
+          <div class="form-row">
             <div class="input-wrapper">
               <label for="" class="input-label">
                 Phone Number*
               </label>
               <input type="text" class="input" placeholder="Phone Number">
+            </div>
+
+            <div class="input-wrapper input-wrapper--xs">
+              <label for="" class="input-label">
+                Organization*
+              </label>
+              <input type="text" class="input" placeholder="Organization*">
             </div>
   
             <div class="input-wrapper">
@@ -1130,8 +1137,8 @@ document.addEventListener('DOMContentLoaded', function() {
   <script>
     $('.slider').slick({
   centerMode: true,
-  centerPadding: '20vw',
-  slidesToShow: 1,
+  centerPadding: '0vw',
+  slidesToShow: 3,
   prevArrow: $('.prev-btn'),
   nextArrow: $('.next-btn'),
   responsive: [
@@ -1139,6 +1146,7 @@ document.addEventListener('DOMContentLoaded', function() {
       breakpoint: 992,
       settings: {
         centerPadding: '10vw',
+  slidesToShow: 1,
 
       }
     },
@@ -1147,7 +1155,7 @@ document.addEventListener('DOMContentLoaded', function() {
       settings: {
         arrows: false,
         centerMode: true,
-        centerPadding: '40px',
+        centerPadding: '10vw',
         slidesToShow: 1
       }
     }
