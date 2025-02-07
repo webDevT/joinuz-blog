@@ -1344,3 +1344,10 @@
 
 
 }
+
+@media (max-width: 400px) {
+  .landing-main-screen {
+    background-position: top;
+  }
+  
+}

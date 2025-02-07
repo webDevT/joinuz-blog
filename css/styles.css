@@ -8014,3 +8014,34 @@ text-section__item
   border-radius: 10px;
   font-weight: 400; }
 
+  @media screen and (max-width: 670) {
+  .landing-main-screen {
+    padding-top: 100px;
+    background-position: top;
+    background-size: 860px;
+  }
+
+}
+@media screen and (max-width: 550) {
+  .landing-main-screen {
+    background-size: 770px;
+  }
+}
+  @media screen and (max-width: 480px) {
+    .similar-jos.nurse-similar-jos .similar-jos__header .section-title div:first-child {
+      font-size: 9.2vw;
+    }
+    .nurse-section-heading {
+      font-size: 9vw;
+    }
+  }
+  @media screen and (max-width: 400) {
+    .btn_sm {
+      font-size: 4.2vw;
+    }
+    .landing-main-screen {
+      background-size: 740px;
+    }
+  }
+
+  
