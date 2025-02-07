@@ -26,7 +26,7 @@
     top: 0;
     right: 0;
     background: #fff;
-    clip-path: polygon(100px 0, 100% 0, 100% 100%, 98px 100%, 0 367px);
+    clip-path: polygon(100px 0, 100% 0, 100% 100%, 98px 100%, 0 242px);
     padding-left: 5px;
     overflow: hidden; 
     box-sizing: border-box; 
@@ -43,13 +43,14 @@
     background: #fff;
     clip-path: polygon(100px 0, 100% 0, 100% 100%, 100px 100%, 0 367px);
     z-index: -1;
+    display: none;
   }
   
   .main-screen__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    clip-path: polygon(100px 0, 100% 0, 100% 100%, 100px 100%, 0 366px);
+    clip-path: polygon(100px 0, 100% 0, 100% 100%, 100px 100%, 0 240px);
   }
   
   .main-screen__img-wrapper {
@@ -71,7 +72,7 @@
 .vacancies-main-screen {
   padding-top: 30px;
   padding-bottom: 30px;
-  min-height: 500px;
+  min-height: 350px;
   background-color: #E41B23;
   background-image: url('../img/what-we-do/pattern.svg');
   position: relative;
@@ -82,15 +83,15 @@
   align-items: center;
 }
 .vacancies-main-screen  .main-screen__img-wrapper {
-  width: 43.125vw;
+  width: 55vw;
   height: 100%;
   /* background: url('../img/job-details-new/stroke.svg'); */
   position: absolute;
   top: 0;
   right: 0;
   background: #fff;
-  -webkit-clip-path: polygon(100px 0, 100% 0, 100% 100%, 219px 100%, 0 306px);
-          clip-path: polygon(100px 0, 100% 0, 100% 100%, 219px 100%, 0 306px);
+  -webkit-clip-path: polygon(100px 0, 100% 0, 100% 100%, 219px 100%, 0 242px);
+          clip-path: polygon(100px 0, 100% 0, 100% 100%, 219px 100%, 0 242px);
   padding-left: 5px;
 }
 .vacancies-main-screen  .main-screen__img {
@@ -98,8 +99,8 @@
   min-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-clip-path: polygon(100px 0, 100% 0, 100% 100%, 219px 100%, 0 305px);
-          clip-path: polygon(100px 0, 100% 0, 100% 100%, 219px 100%, 0 305px);
+  -webkit-clip-path: polygon(100px 0, 100% 0, 100% 100%, 219px 100%, 0 240px);
+          clip-path: polygon(100px 0, 100% 0, 100% 100%, 219px 100%, 0 240px);
   
 }
 .vacancies-main-screen  .main-screen__img-wrapper {
