@@ -81,9 +81,7 @@
   display: none;
   min-width: 200px;
 }
-.pulldown-nav {
-  min-height: 100vh;
-}
+
 .pulldown-nav__menu li ul.active {
   display: block;
   width: 100%;
