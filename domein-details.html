@@ -137,7 +137,81 @@
 
                   <li>
                     <a href="" class="menu__item">
+                      <img src="img/menu/menu-icon1.svg" alt="" class="menu-icon">GZ Psycholoog 2</a>               
+                  </li>
+
+                  <li>
+                    <a href="" class="menu__item">
                       <img src="img/menu/menu-icon1.svg" alt="" class="menu-icon">GZ Psycholoog</a>               
+                  </li>
+
+                  <li>
+                    <a href="" class="menu__item">
+                      <img src="img/menu/menu-icon1.svg" alt="" class="menu-icon">GZ Psycholoog</a>               
+                  </li>
+
+                  <li>
+                    <a href="" class="menu__item">
+                      <img src="img/menu/menu-icon1.svg" alt="" class="menu-icon">GZ Psycholoog</a>               
+                  </li>
+
+                  <li>
+                    <a href="" class="menu__item">
+                      <img src="img/menu/menu-icon1.svg" alt="" class="menu-icon">GZ Psycholoog</a>               
+                  </li>
+
+                  <li>
+                    <a href="" class="menu__item">
+                      <img src="img/menu/menu-icon1.svg" alt="" class="menu-icon">GZ Psycholoog</a>               
+                  </li>
+
+                  <li>
+                    <a href="" class="menu__item">
+                      <img src="img/menu/menu-icon1.svg" alt="" class="menu-icon">GZ Psycholoog</a>               
+                  </li>
+
+                  <li>
+                    <a href="" class="menu__item">
+                      <img src="img/menu/menu-icon1.svg" alt="" class="menu-icon">GZ Psycholoog</a>               
+                  </li>
+
+                  <li>
+                    <a href="" class="menu__item">
+                      <img src="img/menu/menu-icon1.svg" alt="" class="menu-icon">GZ Psycholoog</a>               
+                  </li>
+
+                  <li>
+                    <a href="" class="menu__item">
+                      <img src="img/menu/menu-icon1.svg" alt="" class="menu-icon">GZ Psycholoog</a>               
+                  </li>
+                  <li>
+                    <a href="" class="menu__item">
+                      <img src="img/menu/menu-icon1.svg" alt="" class="menu-icon">GZ Psycholoog</a>               
+                  </li>
+
+                  <li>
+                    <a href="" class="menu__item">
+                      <img src="img/menu/menu-icon1.svg" alt="" class="menu-icon">GZ Psycholoog</a>               
+                  </li>
+
+                  <li>
+                    <a href="" class="menu__item">
+                      <img src="img/menu/menu-icon1.svg" alt="" class="menu-icon">GZ Psycholoog</a>               
+                  </li>
+
+                  <li>
+                    <a href="" class="menu__item">
+                      <img src="img/menu/menu-icon1.svg" alt="" class="menu-icon">GZ Psycholoog</a>               
+                  </li>
+
+                  <li>
+                    <a href="" class="menu__item">
+                      <img src="img/menu/menu-icon1.svg" alt="" class="menu-icon">GZ Psycholoog</a>               
+                  </li>
+
+                  <li>
+                    <a href="" class="menu__item">
+                      <img src="img/menu/menu-icon1.svg" alt="" class="menu-icon">GZ Psycholoog Last</a>               
                   </li>
 
 
@@ -1537,6 +1611,69 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 </script>
 
+<script>
+function waitForClass(element, className, callback, timeout = 500) {
+  const observer = new MutationObserver(() => {
+    if (element.classList.contains(className)) {
+      observer.disconnect();
+      callback();
+    }
+  });
+
+  observer.observe(element, { attributes: true, attributeFilter: ['class'] });
+
+
+  setTimeout(() => observer.disconnect(), timeout);
+}
+
+function initMenu() {
+  document.querySelectorAll('.pulldown-nav__menu').forEach(navWrapper => {
+    navWrapper.querySelectorAll('.menu__item--sub').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const li = link.closest('li');
+        const submenu = li.querySelector('ul');
+
+        if (!submenu) return;
+
+    
+        waitForClass(submenu, 'active', () => {
+     
+          requestAnimationFrame(() => {
+            const height = submenu.offsetHeight + 50; 
+            navWrapper.style.height = `${height}px`;
+          });
+        });
+
+   
+        const observer = new MutationObserver(() => {
+          if (!submenu.classList.contains('active')) {
+            navWrapper.style.height = '';  
+            observer.disconnect();
+          }
+        });
+
+        observer.observe(submenu, { attributes: true, attributeFilter: ['class'] });
+      });
+    });
+  });
+}
+
+
+if (window.innerWidth > 1220) {
+  initMenu();
+}
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 1220) {
+    initMenu();
+  }
+});
+
+
+
+</script>
 
 </body>
 

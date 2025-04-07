@@ -82,7 +82,7 @@
   min-width: 200px;
 }
 .pulldown-nav {
-  min-height: 550px;
+  min-height: 100vh;
 }
 .pulldown-nav__menu li ul.active {
   display: block;
@@ -134,6 +134,10 @@
 .pulldown-nav__menu ul li .menu__item--sub.active .menu-icon {
   filter: brightness(0) saturate(100%) invert(100%);
 }
+.pulldown-nav {
+  overflow-y: auto;
+  max-height: 100vh;
+} 
 @media (max-width: 1400px) {
 
 .header-nav__inner {
