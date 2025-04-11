@@ -1043,7 +1043,9 @@ bibendum et, gravida consequat risus. Donec gravida nec
             <div class="video-btn">
   <img src="img/what-we-do/video-btn.svg" alt="" class="">
             </div>
-            <iframe src="https://www.youtube.com/embed/668nUCeBHyY?si=MAe4wzbjEzqeaTQq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <video id="media-video" controls>
+              <source src="videos/demo_1.mp4" type="video/mp4">
+            </video>
             
           </div>
 
@@ -1538,16 +1540,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   <script>
-    $('.video-btn').click(function(){
-      $(this).fadeOut(); // Fade out the button
-      $('.video-wrapper__img').fadeOut(); // Fade out the image overlay
-
-      // Play the video by adding the autoplay parameter to the iframe's src
-      let iframe = $('.video-wrapper iframe');
-      let src = iframe.attr('src');
-      iframe.attr('src', src + '&autoplay=1');
+    $('.video-btn').click(function() {
+      $(this).fadeOut(); 
+      $('.video-wrapper__img').fadeOut(); 
+  
+      const video = document.getElementById('media-video');
+      video.play();
     });
-</script>
+  </script>
+  
 
 
 <script>
@@ -1670,8 +1671,6 @@ window.addEventListener('resize', () => {
     initMenu();
   }
 });
-
-
 
 </script>
 
