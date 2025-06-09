@@ -272,6 +272,7 @@
   box-shadow: none;
   border: none;
   padding-top: 25px;
+  top: 100px;
 }
 .blog-sidebar .job-description-side-bar__text {
   width: 180px;
@@ -396,7 +397,6 @@
 }
 .blog-details {
   position: relative;
-  overflow-x: hidden;
 }
 .blog-details:after {
   content: url('../img/blog/blog-single-bg.svg');
