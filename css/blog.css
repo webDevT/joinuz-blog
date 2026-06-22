@@ -642,19 +642,6 @@
     .blog-overview .cta-job__title-wrapper {
       background: #F7F7F6;
     }
-    .breadcrumbs li.dt,
-    .breadcrumbs .breadcrumb__separator.dt {
-      display: none;
-    }
-    .breadcrumbs li:last-child span {
-    display: inline-block;
-    max-width: calc(100% - 130px); 
-    width: calc(100% - 130px);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    vertical-align: middle;
-  }
   .blog-single-content table {
     font-size: 14px;
   }
@@ -666,13 +653,6 @@
   }
   .blog-single-hero .text-20 {
     font-size: 16px;
-  }
-  .breadcrumbs {
-    font-size: 16px;
-  }
-  .breadcrumb--blog .container {
-    position: relative;
-    left: -9px;
   }
   .job-description__title {
     font-size: 28px;
