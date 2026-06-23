@@ -1230,7 +1230,17 @@
   line-height: 24px;
 }
 
-.vacancy-cta-section .form-field input[type=text] {
+.vacancy-cta-section .form-field input[type=text],
+.vacancy-cta-section .form-field input[type=email],
+.vacancy-cta-section .form-field input[type=tel] {
+  width: 100%;
+  padding: 0 13px;
+  border: none;
+  font-family: 'Museo', sans-serif;
+  font-size: 20px;
+  background-color: #F7F7F6;
+  -webkit-box-shadow: inset 0 1px 3px 0 rgba(26, 26, 26, 0.4);
+          box-shadow: inset 0 1px 3px 0 rgba(26, 26, 26, 0.4);
   height: 50px;
   min-width: 0;
   border-radius: 8px;
@@ -1242,7 +1252,9 @@
   white-space: nowrap;
 }
 
-.vacancy-cta-section .form-field input[type=text]::-webkit-input-placeholder {
+.vacancy-cta-section .form-field input[type=text]::-webkit-input-placeholder,
+.vacancy-cta-section .form-field input[type=email]::-webkit-input-placeholder,
+.vacancy-cta-section .form-field input[type=tel]::-webkit-input-placeholder {
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
@@ -1252,7 +1264,9 @@
   -webkit-text-fill-color: #8F8B86;
 }
 
-.vacancy-cta-section .form-field input[type=text]::-moz-placeholder {
+.vacancy-cta-section .form-field input[type=text]::-moz-placeholder,
+.vacancy-cta-section .form-field input[type=email]::-moz-placeholder,
+.vacancy-cta-section .form-field input[type=tel]::-moz-placeholder {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1260,14 +1274,18 @@
   opacity: 1;
 }
 
-.vacancy-cta-section .form-field input[type=text]:-ms-input-placeholder {
+.vacancy-cta-section .form-field input[type=text]:-ms-input-placeholder,
+.vacancy-cta-section .form-field input[type=email]:-ms-input-placeholder,
+.vacancy-cta-section .form-field input[type=tel]:-ms-input-placeholder {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   color: #8F8B86;
 }
 
-.vacancy-cta-section .form-field input[type=text]::placeholder {
+.vacancy-cta-section .form-field input[type=text]::placeholder,
+.vacancy-cta-section .form-field input[type=email]::placeholder,
+.vacancy-cta-section .form-field input[type=tel]::placeholder {
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
@@ -2687,7 +2705,9 @@
     letter-spacing: -0.4px;
   }
 
-  .vacancy-cta-section .form-field input[type=text] {
+  .vacancy-cta-section .form-field input[type=text],
+  .vacancy-cta-section .form-field input[type=email],
+  .vacancy-cta-section .form-field input[type=tel] {
     height: auto;
     min-height: 40px;
     padding: 12px 16px;
@@ -2696,22 +2716,30 @@
     letter-spacing: -0.35px;
   }
 
-  .vacancy-cta-section .form-field input[type=text]::-webkit-input-placeholder {
+  .vacancy-cta-section .form-field input[type=text]::-webkit-input-placeholder,
+  .vacancy-cta-section .form-field input[type=email]::-webkit-input-placeholder,
+  .vacancy-cta-section .form-field input[type=tel]::-webkit-input-placeholder {
     font-size: 14px;
     letter-spacing: -0.35px;
   }
 
-  .vacancy-cta-section .form-field input[type=text]::-moz-placeholder {
+  .vacancy-cta-section .form-field input[type=text]::-moz-placeholder,
+  .vacancy-cta-section .form-field input[type=email]::-moz-placeholder,
+  .vacancy-cta-section .form-field input[type=tel]::-moz-placeholder {
     font-size: 14px;
     letter-spacing: -0.35px;
   }
 
-  .vacancy-cta-section .form-field input[type=text]:-ms-input-placeholder {
+  .vacancy-cta-section .form-field input[type=text]:-ms-input-placeholder,
+  .vacancy-cta-section .form-field input[type=email]:-ms-input-placeholder,
+  .vacancy-cta-section .form-field input[type=tel]:-ms-input-placeholder {
     font-size: 14px;
     letter-spacing: -0.35px;
   }
 
-  .vacancy-cta-section .form-field input[type=text]::placeholder {
+  .vacancy-cta-section .form-field input[type=text]::placeholder,
+  .vacancy-cta-section .form-field input[type=email]::placeholder,
+  .vacancy-cta-section .form-field input[type=tel]::placeholder {
     font-size: 14px;
     letter-spacing: -0.35px;
   }
