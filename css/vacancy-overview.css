@@ -108,7 +108,6 @@
   position: relative;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  margin-top: 124px;
   overflow: hidden;
 }
 
@@ -4065,14 +4064,14 @@
 
 @media (max-width: 1240px) {
   .vacancy-hero {
-    margin-top: 66px;
+  
   }
 }
 
 @media (max-width: 992px) {
   .vacancy-hero {
     min-height: auto;
-    margin-top: 65px;
+  
     display: flex;
     flex-direction: column-reverse;
   }
