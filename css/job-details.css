@@ -149,6 +149,7 @@
 .wrapper--grey {
   background: #F7F7F6;
 }
+
 .offer-requie__item {
   width: 48%;
 }
@@ -179,7 +180,7 @@
 /* start job description content */
 .job-description-content {
   padding-top: 150px;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
 }
 .job-description-content .container {
   display: -webkit-box;
@@ -206,9 +207,19 @@
           box-shadow: 0px 4px 10px 0px rgba(149, 149, 149, 0.10);
   padding: 30px 20px;
   height: auto;
+  overflow: visible;
 }
 .job-description-side-bar.active {
   position: static;
+}
+.job-description-side-bar__pin {
+  position: absolute;
+  top: -25px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  z-index: 2;
 }
 .job-description-wrapper {
   width: calc(100% - 480px);
@@ -433,7 +444,7 @@
   margin-bottom: 0;
 }
 .what-do-you-get {
-  margin-top: 150px;
+  margin-top: 50px;
 }
 .h2 span {
   color: #E41B23;
@@ -486,7 +497,7 @@
   margin-bottom: 15px;
 }
 .wrapper--grey .container {
-  max-width: 1400px;
+  max-width: 1450px;
 }
 .what-do-you-get__item {
   -webkit-transition: all .5s;
@@ -519,9 +530,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -810,6 +821,10 @@
 .job-description-side-bar .polaroid__socials a:hover {
   background: #000;
 }
+.footer {
+  overflow-x: hidden;
+  overflow-y: visible;
+}
 @media (max-width: 1850px) {
   .content-job-details:before {
     left: -5vw;
@@ -1068,7 +1083,7 @@
     margin-left: -21px;
   }
   .job-description-content {
-    padding-top: 88px;
+    padding-top: 0px;
   }
   .what-do-you-get__item {
     -webkit-box-orient: vertical;
@@ -1229,7 +1244,7 @@
     width: 100%;
   }
   .what-do-you-get {
-    margin-top: 88px;
+    margin-top: 30px;
   }
   .what-do-you-get .h2 {
     margin-bottom: 24px;
@@ -1381,6 +1396,7 @@
   }
   .what-do-you-get:after {
     right: 0vw;
+    display: none;
   } 
   .job-description__item-row:nth-child(3) .job-description__title img {
     right: 12%;
@@ -1443,4 +1459,160 @@ h1,
   margin-bottom: 0;
  }
 }
+
+/* start joinuz-benefits-section */
+.joinuz-benefits-section {
+  position: relative;
+  z-index: 2;
+  padding: 150px 0 0px;
+}
+
+.joinuz-benefits-section__title {
+  margin: 0 0 50px;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 64px;
+  text-align: center;
+  color: #191919;
+}
+
+.joinuz-benefits-section__title span {
+  color: #E41B23;
+}
+
+.joinuz-benefits-section__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1410px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  width: 330px;
+  max-width: 100%;
+  min-height: 250px;
+  padding: 25px;
+  border-radius: 10px;
+  background: #fff;
+  -webkit-box-shadow: 0 4px 5px rgba(149, 149, 149, 0.1);
+          box-shadow: 0 4px 5px rgba(149, 149, 149, 0.1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.benefit-card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.benefit-card__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  background: #E41B23;
+}
+
+.benefit-card__icon img {
+  display: block;
+  width: 30px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.benefit-card__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000;
+}
+
+.benefit-card__text {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+  color: #191919;
+}
+
+@media (max-width: 1410px) {
+  .benefit-card {
+    width: calc((100% - 90px) / 4);
+    -webkit-box-flex: 1 1 calc((100% - 90px) / 4);
+        -ms-flex: 1 1 calc((100% - 90px) / 4);
+            flex: 1 1 calc((100% - 90px) / 4);
+    max-width: 330px;
+  }
+}
+
+@media (max-width: 992px) {
+  .joinuz-benefits-section {
+    padding: 64px 0 88px;
+  }
+
+  .joinuz-benefits-section__title {
+    margin-bottom: 32px;
+    font-size: 36px;
+    line-height: 34px;
+  }
+
+  .benefit-card {
+    width: calc((100% - 30px) / 2);
+    -webkit-box-flex: 1 1 calc((100% - 30px) / 2);
+        -ms-flex: 1 1 calc((100% - 30px) / 2);
+            flex: 1 1 calc((100% - 30px) / 2);
+    max-width: none;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .joinuz-benefits-section {
+    padding: 48px 0 64px;
+  }
+
+  .joinuz-benefits-section__grid {
+    gap: 16px;
+  }
+
+  .benefit-card {
+    width: 100%;
+    -webkit-box-flex: 1 1 100%;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    min-height: 0;
+  }
+}
+/* end joinuz-benefits-section */
 
