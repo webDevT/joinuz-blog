@@ -888,7 +888,7 @@
   .footer__top--no-line:after {
     content: url('../img/job-details-new/footer-line.svg');
     position: absolute;
-    top: -130px;
+    top: -112px;
     right: 0;
 
     
