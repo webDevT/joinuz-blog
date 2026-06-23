@@ -905,6 +905,63 @@
       </section>
       <!-- end vacancy seo -->
 
+      <!-- start vacancy partners -->
+      <section class="vacancy-partners-section" aria-labelledby="vacancy-partners-title">
+        <div class="vacancy-partners-section__header">
+          <h2 class="vacancy-partners-section__title" id="vacancy-partners-title" lang="nl">
+            <span>Proudly</span> partnering with...
+          </h2>
+        </div>
+
+        <div class="vacancy-partners-section__marquee" data-partners-marquee>
+          <div class="vacancy-partners-section__viewport">
+            <div class="vacancy-partners-section__track">
+              <ul class="vacancy-partners-section__list">
+                <li class="vacancy-partners-section__item">
+                  <img src="img/vacancy-overview/partners/logo-amsterdam.png" alt="Gemeente Amsterdam" width="300" height="250" loading="lazy">
+                </li>
+                <li class="vacancy-partners-section__item">
+                  <img src="img/vacancy-overview/partners/logo-rotterdam.png" alt="Gemeente Rotterdam" width="300" height="250" loading="lazy">
+                </li>
+                <li class="vacancy-partners-section__item">
+                  <img src="img/vacancy-overview/partners/logo-den-haag.png" alt="Gemeente Den Haag" width="300" height="250" loading="lazy">
+                </li>
+                <li class="vacancy-partners-section__item">
+                  <img src="img/vacancy-overview/partners/logo-utrecht.png" alt="Gemeente Utrecht" width="300" height="250" loading="lazy">
+                </li>
+                <li class="vacancy-partners-section__item">
+                  <img src="img/vacancy-overview/partners/logo-eindhoven.png" alt="Gemeente Eindhoven" width="300" height="250" loading="lazy">
+                </li>
+                <li class="vacancy-partners-section__item">
+                  <img src="img/vacancy-overview/partners/logo-groningen.png" alt="Gemeente Groningen" width="300" height="250" loading="lazy">
+                </li>
+              </ul>
+              <ul class="vacancy-partners-section__list" aria-hidden="true">
+                <li class="vacancy-partners-section__item">
+                  <img src="img/vacancy-overview/partners/logo-amsterdam.png" alt="" width="300" height="250" loading="lazy">
+                </li>
+                <li class="vacancy-partners-section__item">
+                  <img src="img/vacancy-overview/partners/logo-rotterdam.png" alt="" width="300" height="250" loading="lazy">
+                </li>
+                <li class="vacancy-partners-section__item">
+                  <img src="img/vacancy-overview/partners/logo-den-haag.png" alt="" width="300" height="250" loading="lazy">
+                </li>
+                <li class="vacancy-partners-section__item">
+                  <img src="img/vacancy-overview/partners/logo-utrecht.png" alt="" width="300" height="250" loading="lazy">
+                </li>
+                <li class="vacancy-partners-section__item">
+                  <img src="img/vacancy-overview/partners/logo-eindhoven.png" alt="" width="300" height="250" loading="lazy">
+                </li>
+                <li class="vacancy-partners-section__item">
+                  <img src="img/vacancy-overview/partners/logo-groningen.png" alt="" width="300" height="250" loading="lazy">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end vacancy partners -->
+
     </main>
    
     <!-- end vacancies content -->
@@ -1159,6 +1216,9 @@
       var fade = section.querySelector('.vacancy-seo-section__fade');
       var toggle = section.querySelector('.vacancy-seo-section__toggle');
       var toggleText = section.querySelector('.vacancy-seo-section__toggle-text');
+      var animating = false;
+      var animationTimer = null;
+      var animationDuration = 450;
 
       if (!expandable || !toggle) {
         return;
@@ -1168,43 +1228,118 @@
         return window.matchMedia('(max-width: 768px)').matches;
       }
 
+      function prefersReducedMotion() {
+        return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      }
+
       function getFadeHeight() {
         return fade ? fade.offsetHeight : 0;
       }
 
-      function getCollapsedPreviewHeight() {
-        var previewBlocks = section.querySelectorAll('.vacancy-seo-block--collapsed-visible');
-
-        if (!previewBlocks.length) {
-          return expandable.scrollHeight;
-        }
+      function withUnconstrainedHeight(measureFn) {
+        var prevMaxHeight = expandable.style.maxHeight;
+        var prevOverflow = expandable.style.overflow;
 
         expandable.style.maxHeight = 'none';
+        expandable.style.overflow = 'hidden';
 
-        var firstBlock = previewBlocks[0];
-        var lastBlock = previewBlocks[previewBlocks.length - 1];
-        var previewHeight = lastBlock.offsetTop - firstBlock.offsetTop + lastBlock.offsetHeight;
+        var result = measureFn();
 
-        if (isMobileViewport()) {
-          previewHeight = Math.max(previewHeight - getFadeHeight(), 0);
-        }
+        expandable.style.maxHeight = prevMaxHeight;
+        expandable.style.overflow = prevOverflow;
 
-        return Math.ceil(previewHeight);
+        return result;
       }
 
-      function setCollapsedHeight() {
-        if (section.classList.contains('is-expanded')) {
-          return;
-        }
+      function getCollapsedPreviewHeight() {
+        return withUnconstrainedHeight(function () {
+          var previewBlocks = section.querySelectorAll('.vacancy-seo-block--collapsed-visible');
 
+          if (!previewBlocks.length) {
+            return expandable.scrollHeight;
+          }
+
+          var firstBlock = previewBlocks[0];
+          var lastBlock = previewBlocks[previewBlocks.length - 1];
+          var previewHeight = lastBlock.offsetTop - firstBlock.offsetTop + lastBlock.offsetHeight;
+
+          if (isMobileViewport()) {
+            previewHeight = Math.max(previewHeight - getFadeHeight(), 0);
+          }
+
+          return Math.ceil(previewHeight);
+        });
+      }
+
+      function getFullHeight() {
+        return withUnconstrainedHeight(function () {
+          return expandable.scrollHeight;
+        });
+      }
+
+      function applyCollapsedHeight() {
         var previewHeight = getCollapsedPreviewHeight();
 
         section.style.setProperty('--vacancy-seo-collapsed-height', previewHeight + 'px');
         expandable.style.maxHeight = previewHeight + 'px';
+        expandable.style.overflow = 'hidden';
         section.classList.add('is-collapsed-ready');
       }
 
-      function setExpanded(isExpanded) {
+      function setCollapsedHeight() {
+        if (section.classList.contains('is-expanded') || animating) {
+          return;
+        }
+
+        applyCollapsedHeight();
+      }
+
+      function clearAnimationTimer() {
+        if (animationTimer) {
+          window.clearTimeout(animationTimer);
+          animationTimer = null;
+        }
+      }
+
+      function finishExpandAnimation() {
+        clearAnimationTimer();
+        animating = false;
+        toggle.disabled = false;
+        expandable.style.maxHeight = 'none';
+        expandable.style.overflow = 'visible';
+      }
+
+      function finishCollapseAnimation() {
+        clearAnimationTimer();
+        animating = false;
+        toggle.disabled = false;
+        expandable.style.overflow = 'hidden';
+      }
+
+      function onTransitionEnd(event) {
+        if (event.target !== expandable || event.propertyName !== 'max-height') {
+          return;
+        }
+
+        if (section.classList.contains('is-expanded')) {
+          finishExpandAnimation();
+        } else {
+          finishCollapseAnimation();
+        }
+      }
+
+      function scheduleAnimationFallback() {
+        clearAnimationTimer();
+        animationTimer = window.setTimeout(function () {
+          if (section.classList.contains('is-expanded')) {
+            finishExpandAnimation();
+          } else {
+            finishCollapseAnimation();
+          }
+        }, animationDuration + 50);
+      }
+
+      function setExpandedInstant(isExpanded) {
         section.classList.toggle('is-expanded', isExpanded);
         toggle.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
 
@@ -1214,10 +1349,74 @@
 
         if (isExpanded) {
           expandable.style.maxHeight = 'none';
+          expandable.style.overflow = 'visible';
         } else {
-          setCollapsedHeight();
+          applyCollapsedHeight();
         }
       }
+
+      function setExpandedAnimated(isExpanded) {
+        animating = true;
+        toggle.disabled = true;
+        expandable.style.overflow = 'hidden';
+
+        if (isExpanded) {
+          var startHeight = expandable.getBoundingClientRect().height;
+          var endHeight = getFullHeight();
+
+          section.classList.add('is-expanded');
+          toggle.setAttribute('aria-expanded', 'true');
+
+          if (toggleText) {
+            toggleText.textContent = 'Minder lezen';
+          }
+
+          expandable.style.maxHeight = startHeight + 'px';
+
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              expandable.style.maxHeight = endHeight + 'px';
+              scheduleAnimationFallback();
+            });
+          });
+        } else {
+          var collapseStartHeight = expandable.scrollHeight;
+          var collapseEndHeight = getCollapsedPreviewHeight();
+
+          expandable.style.maxHeight = collapseStartHeight + 'px';
+
+          section.classList.remove('is-expanded');
+          toggle.setAttribute('aria-expanded', 'false');
+
+          if (toggleText) {
+            toggleText.textContent = 'Lees meer';
+          }
+
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              expandable.style.maxHeight = collapseEndHeight + 'px';
+              section.style.setProperty('--vacancy-seo-collapsed-height', collapseEndHeight + 'px');
+              section.classList.add('is-collapsed-ready');
+              scheduleAnimationFallback();
+            });
+          });
+        }
+      }
+
+      function setExpanded(isExpanded) {
+        if (animating) {
+          return;
+        }
+
+        if (prefersReducedMotion()) {
+          setExpandedInstant(isExpanded);
+          return;
+        }
+
+        setExpandedAnimated(isExpanded);
+      }
+
+      expandable.addEventListener('transitionend', onTransitionEnd);
 
       toggle.addEventListener('click', function () {
         setExpanded(!section.classList.contains('is-expanded'));
@@ -1230,6 +1429,56 @@
       if (document.fonts && document.fonts.ready) {
         document.fonts.ready.then(setCollapsedHeight);
       }
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var marquee = document.querySelector('[data-partners-marquee]');
+
+      if (!marquee) {
+        return;
+      }
+
+      var section = marquee.closest('.vacancy-partners-section');
+      var track = marquee.querySelector('.vacancy-partners-section__track');
+      var primaryList = marquee.querySelector('.vacancy-partners-section__list:not([aria-hidden="true"])');
+      var viewport = marquee.querySelector('.vacancy-partners-section__viewport');
+      var marqueeSpeed = 45;
+
+      if (!section || !track || !primaryList || !viewport) {
+        return;
+      }
+
+      function prefersReducedMotion() {
+        return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      }
+
+      function updateMarquee() {
+        var listWidth = primaryList.scrollWidth;
+        var viewportWidth = viewport.clientWidth;
+        var shouldAnimate = listWidth > viewportWidth && !prefersReducedMotion();
+
+        section.classList.toggle('is-animated', shouldAnimate);
+        section.classList.toggle('is-static', !shouldAnimate);
+
+        if (shouldAnimate) {
+          var duration = Math.max(listWidth / marqueeSpeed, 20);
+          section.style.setProperty('--vacancy-partners-marquee-duration', duration + 's');
+        } else {
+          section.style.removeProperty('--vacancy-partners-marquee-duration');
+          track.style.transform = '';
+        }
+      }
+
+      window.addEventListener('resize', updateMarquee);
+      window.addEventListener('load', updateMarquee);
+
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(updateMarquee);
+      }
+
+      updateMarquee();
     })();
   </script>
 
