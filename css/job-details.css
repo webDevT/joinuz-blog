@@ -581,6 +581,7 @@
   top: -2px;
 }
 .footer {
+
   /* overflow-x: hidden; */
 }
 .footer__top--no-line {
@@ -771,7 +772,7 @@
 .content-job-details:before {
   content: '';
   position: absolute;
-  top: 12px;
+  top: -65px;
   left: 0;  
   max-width: 100%;
   overflow: hidden;
@@ -783,14 +784,14 @@
   background-repeat: no-repeat;
 }
 .wrapper--grey  {
-  padding-bottom: 48px;
+  padding-bottom: 0px;
 }
 .job-description-content {
   position: relative;
   z-index: 2;
 }
 .content-job-details {
-  padding-bottom: 72px;
+  padding-bottom: 193px;
 }
 .what-do-you-get {
   position: relative;
@@ -862,6 +863,11 @@
  
 }
 @media (max-width: 1360px) {
+  .footer {
+    margin-top: 0;
+  }
+}
+@media (max-width: 1360px) {
   .offer-requier {
     width: 980px;
     max-width: calc(100% - 30px);
@@ -897,7 +903,7 @@
     padding-bottom: 0;
   }
   .footer__top--no-line {
-    padding-top: 60px;
+    padding-top: 88px;
     position: relative;
   }
   .footer__top--no-line:after {
@@ -1184,6 +1190,9 @@
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border-bottom: none;
+   }
+   .content-job-details {
+    padding-bottom: 50px;
    }
  
  
