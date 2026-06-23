@@ -3683,7 +3683,8 @@
     overflow-x: auto;
     overflow-y: hidden;
     max-height: calc(25px + 336px);
-    touch-action: pan-x;
+    overscroll-behavior-x: contain;
+    overscroll-behavior-y: auto;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
     scroll-padding-left: var(--vacancy-blog-slider-inset, 16px);

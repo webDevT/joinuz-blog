@@ -1927,7 +1927,56 @@
         $slider.find('.vacancy-blog-section__slide').removeClass('vacancy-blog-section__slide--peek');
         $prevArrow.removeClass('slick-disabled').attr('aria-disabled', 'false');
         $nextArrow.removeClass('slick-disabled').attr('aria-disabled', 'false');
+        $slider[0].style.overflowX = '';
         syncSliderInset();
+      }
+
+      function setupMobileSliderTouch() {
+        var sliderEl = $slider[0];
+        var startX = 0;
+        var startY = 0;
+        var axis = null;
+
+        function resetTouchAxis() {
+          axis = null;
+          sliderEl.style.overflowX = '';
+        }
+
+        function onTouchStart(event) {
+          if (!mobileQuery.matches || $slider.hasClass('slick-initialized')) {
+            return;
+          }
+
+          startX = event.touches[0].clientX;
+          startY = event.touches[0].clientY;
+          axis = null;
+        }
+
+        function onTouchMove(event) {
+          if (!mobileQuery.matches || $slider.hasClass('slick-initialized') || event.touches.length !== 1) {
+            return;
+          }
+
+          var dx = event.touches[0].clientX - startX;
+          var dy = event.touches[0].clientY - startY;
+
+          if (axis === null) {
+            if (Math.abs(dx) > 8 || Math.abs(dy) > 8) {
+              axis = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
+            }
+          }
+
+          if (axis === 'y') {
+            sliderEl.style.overflowX = 'hidden';
+          } else if (axis === 'x') {
+            sliderEl.style.overflowX = 'auto';
+          }
+        }
+
+        sliderEl.addEventListener('touchstart', onTouchStart, { passive: true });
+        sliderEl.addEventListener('touchmove', onTouchMove, { passive: true });
+        sliderEl.addEventListener('touchend', resetTouchAxis, { passive: true });
+        sliderEl.addEventListener('touchcancel', resetTouchAxis, { passive: true });
       }
 
       function initDesktopSlider() {
@@ -1966,6 +2015,7 @@
       }
 
       initDesktopSlider();
+      setupMobileSliderTouch();
 
       $(window).on('resize', function () {
         syncSliderInset();
